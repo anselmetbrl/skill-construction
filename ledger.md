@@ -42,6 +42,15 @@ ids are stable — refer to them by id.
         facets named so far: os lang env ide research agent vcs db viz ...
     R6  the goal is a SHORTLIST — a few options per facet — not only a map
     R7  user is screening on the order of tens of thousands of repos
+    R8  precuration is manual and stays manual. the pipeline starts at the
+        already-curated seed list.
+    R9  the index does NOT replace reading the projects. user still analyses
+        each one directly. the index gives orientation and access, not substitution.
+    R10 the bottleneck is attention and access, not storage.
+        "rat in a maze" = reading repo-by-repo never yields position,
+        only depth. position exists only in the collection.
+    R11 O14's "digest randomly" = attention gives out, sampling turns haphazard.
+        not "order is irrelevant".
 
 ## G — guesses awaiting confirmation
 
@@ -58,6 +67,13 @@ claude's, made before the working rules existed. none are earned yet.
     G9  O11 "from uni" / "from multi" = per-repo vs whole-collection
     G10 the facet words the user speaks naturally (os, lang, ide, db, viz)
         are plain domain terms, not latin roots. bears on C2.
+    G11 there may be two outputs, not one:
+        index      full map of everything crawled. L170 no-ranking applies here.
+        shortlist  the few per facet (R6). selection is the point, L170 does not bind.
+        if so, O17 is not a contradiction but two artifacts written as one.
+    G12 relating is the heart of the pipeline, gisting is feedstock for it.
+        would invert the file's weighting: phase 2 has ~70 lines,
+        phase 3's relation ontology is eight `?`.
 
 ## C — conflicts found
 
@@ -116,3 +132,5 @@ claude's, made before the working rules existed. none are earned yet.
         everything is now a proposal.
     M3  user is partially blind. short lines. no walls. no dense prose.
     M4  claude assists. claude does not run ahead.
+    M5  claude overread L178 as "the index replaces reading the repos".
+        user corrected: it is orientation, not substitution. see R9.
