@@ -1,0 +1,374 @@
+# indexing.knf — deconstruction of indexing_autoinfo_hg v0.1
+#
+# Nothing parses this. The reader is a language model, so structure serves
+# *attention*, not a compiler. Braces and indentation make scope visible;
+# they enforce nothing.
+#
+# METHOD: v0.1 mixed four kinds of statement in one stream. Sorting them by
+# KIND is the whole restructure — each kind has a different lifetime, a
+# different reader, and a different failure mode when you get it wrong.
+#
+#   invariant  must always hold      never sequenced, never "usually"
+#   procedure  happens in order      the only place step-1/step-2 is legal
+#   schema     shape of an artifact  data, not behaviour
+#   hazard     observed failure      why an invariant exists; keeps it from
+#                                    being rationalized away under pressure
+#   open       unresolved            a QUESTION, never a guess
+#
+# Nothing is deleted from v0.1 without being logged in open/. Content I could
+# not decipher is quoted verbatim, not paraphrased.
+
+meta {
+  artifact "preprocessing pipeline: github repo list -> dossiers -> gists -> relational INDEX"
+  purpose  "augment a human's research judgment, not replace it"
+  source   "indexing_autoinfo_hg_v0.1.md"
+  status   "v0.2 — sorted, not yet rewritten. open/ must shrink before code."
+}
+
+# ── invariants ────────────────────────────────────────────────────────────
+# What must be TRUE at every point. If any of these is false, the run is
+# wrong even if it completed. These survive rewrites of every procedure.
+
+invariants {
+
+  immutability {
+    holds   "raw dossiers persist untouched; later layers COMPILE FROM them"
+    holds   "no layer rewrites the history of a layer below it"
+    because "if gists can edit dossiers, evidence and interpretation merge
+             and you can no longer tell which is which"
+    tension "v0.1 also says overwrite-in-place on partial records — see open/overwrite"
+  }
+
+  evidence-not-interpretation {
+    scope   "phase 1 dossiers only"
+    holds   "no summarizing, paraphrasing, or inferring"
+    holds   "no invented fields; missing value -> empty or \"unknown\""
+    because "a dossier is the territory. the moment it contains inference,
+             every downstream layer inherits that inference as fact"
+  }
+
+  failure-is-an-outcome {
+    holds   "a blocked/private/deleted repo is RECORDED, never dropped"
+    holds   "blocked repos stay visible in the INDEX with links preserved"
+    because "a silently missing repo is indistinguishable from a repo that
+             was never seeded. absence must be legible as a result"
+    note    "v0.1: 'A blocked repo is an outcome, no omission' — keep this line, it's the whole principle in six words"
+  }
+
+  index-is-standalone {
+    holds   "reading only the INDEX conveys each repo's gist"
+    holds   "no forced navigation into individual .gist.md files"
+    because "an index that requires opening N files is not an index"
+  }
+
+  map-not-leaderboard {
+    holds   "no numbered rankings in the INDEX"
+    holds   "comparisons are of QUALITIES, never quantities"
+    forbids "comparing stars / contributors / forks across repos"
+    because "quantitative comparison silently smuggles in a value judgment
+             the user did not ask for. counts are attributes, not verdicts"
+    note    "counts still get RECORDED (see schema/bottom-up) — recording is not comparing"
+  }
+
+  contradictions-are-surfaced-not-resolved {
+    holds   "conflicting claims (within or across repos) are RECORDED as conflicts"
+    holds   "the user resolves; the pipeline never picks a winner"
+    because "this is the 'augments judgment' principle made concrete"
+  }
+
+  completeness-over-cleanliness {
+    holds   "a visibly incomplete artifact beats a tidy one that hid something"
+  }
+
+  no-html-noise {
+    holds   "all artifacts are markdown; IDE-foldable"
+  }
+}
+
+# ── hazards ───────────────────────────────────────────────────────────────
+# Observed failure modes. These are v0.1's best content — each one is a real
+# mistake someone made, not an imagined one. Kept close to the invariants
+# they justify, because a rule without its reason gets argued around.
+
+hazards {
+
+  build-is-not-the-run {
+    saw   "a perfect pipeline implementation where the agent never crawled a real repo"
+    want  "CRAWL actually executed against the seed file; raw dossiers inspected by eye"
+    quote "The build is not the run. The map is not the territory."
+    note  "this is the single highest-value line in v0.1"
+  }
+
+  mechanical-gist {
+    saw   "regex section extraction + LLM-as-templater producing fields that
+           LOOK semantic but summarize nothing"
+    saw   "'send README to model X, write response to disk' with no agent oversight"
+    want  "the agent ITSELF reads and summarizes"
+    rule  "resist the urge to export responsibility to a sub-LLM stage"
+    note  "subtle and correct — delegation here trades understanding for throughput
+           and the loss is invisible in the output"
+  }
+
+  middle-of-context-neglect {
+    saw   "material in the middle of a long context gets under-weighted"
+    want  "primary-scored repos at TOP, multi-synthesis field at BOTTOM"
+    note  "a real, documented effect — this mitigation is well-aimed"
+  }
+
+  custom-readme-headings {
+    saw   "assuming a literal '## Features' section exists"
+    note  "READMEs invent their own: 'Three primitives', 'Benchmarks', 'What X is not'"
+  }
+
+  facet-echo {
+    saw   "the same phrase reused across 'What this is' / 'Approach' / 'Features' / 'Why'"
+    want  "each facet takes a genuinely different angle"
+  }
+
+  premature-distillation {
+    saw   "cutting to 4 tags before the tag set had converged"
+    want  "derive first, distill second"
+  }
+}
+
+# ── procedures ────────────────────────────────────────────────────────────
+# The ONLY section where order is legitimate. Everything here is brittle by
+# nature — it encodes one path through a problem that has many.
+
+procedures {
+
+  checkpoint {
+    step "mark state.json BEFORE work"
+    step "mark state.json AFTER outcome"
+    step "save atomically"
+    rule "never delete prior artifacts as part of a state transition"
+    unit "per-repo (per-batch is the stated minimum)"
+  }
+
+  resume {
+    trigger "before EVERY crawl/scrape call"
+    step    "does <owner>__<repo>.md exist?"
+    step    "if yes, read its `status` field"
+    case    "status: ok            -> skip, do not re-fetch"
+    case    "status: rate-limited  -> re-crawl this repo only"
+    case    "status: partial       -> re-crawl this repo only"
+    note    "resume must never wipe intermediate folders"
+  }
+
+  phase-1-crawl {
+    step "iterate the seed list strictly sequentially, one repo at a time"
+    rule "do not recurse into codebase subdirectories"
+    rule "extract the complete README.md"
+    rule "private/deleted/blocked -> BLOCKED_REPORT.md, then continue to next"
+    rule "rate-limit or anti-bot -> retry, then alternative approach, then flag with reason"
+    rule "never silently skip a rate-limited repo"
+    halt "on completion, PAUSE awaiting CLI input (proceed | retry-blocked). Do not terminate."
+  }
+
+  retry-ladder {
+    verbatim "x2 attempts before escalading x2 x2 then fail & flag"
+    status   "UNDECIPHERED — see open/retry-ladder. Not implemented until stated in words."
+  }
+
+  self-heal {
+    rule "reflect backward incrementally as you go; do not rush forward-only"
+  }
+}
+
+# ── schemas ───────────────────────────────────────────────────────────────
+# Shapes of artifacts. Data, not behaviour.
+
+schemas {
+
+  dossier {
+    path   "<owner>__<repo>.md"
+    field  "status: ok | partial | rate-limited"
+    layer  "phase 1 — evidence"
+  }
+
+  bottom-up {
+    layer "phase 2.1 — per-repo attributes"
+    linguisticality {
+      lang "percentages, must sum to ~100% — a gap means something is unknown"
+      what "per-language ROLE. every percentage is paired with a role."
+      why  "free description"
+      note "list ALL languages present. a real Rust core can hide under 8% Python scripting."
+    }
+    popularity { star _ ; forks _ ; contribution _ }
+    chronology { first_creation "YYYY/MM/DD" ; last_commit "N ago (D/M/Y)" }
+    misc       { license _ ; unresolved_issue "n" ; resolved_issue "n" }
+  }
+
+  tags {
+    cap-per-repo       4
+    cap-per-collection 12
+    format             "lowercase_with_underscores"
+    empty              "#void — never force a tag"
+    variety            "mix broad categories, specific keywords, sub-genres"
+    genericity         "a tag must plausibly recur across repos; no one-offs"
+    order              "derive fully, THEN distill to the cap"
+    open               "see open/tag-caps — 12 across the whole collection may be infeasible"
+  }
+
+  cross-reference {
+    layer  "phase 3 — written back into gist frontmatter"
+    field  "conflicts-with:"
+    field  "x-link-with:"
+    field  "y: — UNFILLED in v0.1"
+    field  "z: — UNFILLED in v0.1"
+  }
+
+  index-tree {
+    rule "each repo appears ONCE, under its primary tag"
+    rule "supplementary tags fold in as inline metadata"
+    rule "tab indentation, not spaces — visual nesting headers alone can't give"
+    rule "each facet on its own tab-indented line, with a header (# ## ###) matching tree depth"
+    row  "[repo-link](owner/repo) | [lang(n%)] [star(n*)] [contributors(n@)] | [official-description]"
+    sub  "#git  -> tldr shortcut-links from official readme/website/wiki"
+    sub  "#gist -> what-it-is (notion) / why-it-is (question) / how-it-is (mediation)"
+    how  "technology (structurality, construction, internality)"
+    how  "technicality (systemicality, constitution, externality)"
+    warn "beware significant unresolved-issues about ... [quote-links]"
+    warn "beware significant contradictions about ... [quote-links]"
+  }
+
+  bias-flags {
+    layer  "phase 2 — quality warnings on each gist"
+    mechanism "does any body sentence assert a superlative or self-praise AS
+               ESTABLISHED FACT, in the project's own promotional register,
+               rather than describing what the thing does?"
+    note   "^ this is the only OPERATIONAL test in v0.1's bias section. keep it."
+    flag   "hype — 'the best / first / only / most / fastest'"
+    flag   "unfree? — cloud-only or paid-tier-sabotaged; self-hosted completeness is essential"
+    flag   "abandon — staleness"
+    flag   "rough — describe rough projects as rough, do not smooth them"
+    open   "see open/bias-list — the remaining terms are overlapping concepts, not tests"
+  }
+}
+
+# ── open ──────────────────────────────────────────────────────────────────
+# Unresolved. Every entry is a QUESTION. Filling one from imagination would
+# convert a known-unknown into a false-known — strictly worse than blank.
+# Nothing below gets implemented until it moves out of this section.
+
+open {
+
+  scale {
+    q       "how many repos in the seed list? 10? 100? 1000?"
+    blocks  "almost everything below"
+    why     "v0.1 says 'read all in one llm turn' for BOTH phase 2 and phase 3.
+             that has a hard ceiling. it also directly conflicts with per-repo
+             checkpointing and with 'thread carefully 1 by 1 sequentially'.
+             one of these has to give, and which one depends entirely on N."
+    note    "this is the biggest architectural conflict in v0.1"
+  }
+
+  query-or-list {
+    q      "is the input a LIST of repos, a research QUERY, or both?"
+    why    "phase 0 says input is 'a list of github projects'.
+            but scoring uses 'relativity_with_my-original-query' — and no
+            query is defined anywhere in v0.1. dangling reference."
+    blocks "all of scoring/ranking"
+  }
+
+  uni-multi {
+    q       "2.1 says 'bottom-up augmentation (from uni)', 2.2 says 'top-down (from multi)'"
+    guess   "uni = single repo in isolation; multi = the collection as a whole?"
+    status  "NOT ASSUMED. 2.2 has no body at all in v0.1."
+  }
+
+  retry-ladder {
+    q        "'x2 attempts before escalading x2 x2 then fail & flag' — in words?"
+    reading  "2 attempts, then escalate; 2 more, then escalate again; 2 more; then fail?"
+    status   "one of several readings. not guessed at."
+  }
+
+  overwrite {
+    q   "immutability says 'never delete prior artifacts'.
+         resume says a partial record is 'overwritten in place'.
+         overwriting a partial IS destroying an artifact."
+    fix "probably: write the retry alongside, supersede rather than replace. confirm?"
+  }
+
+  tag-caps {
+    q   "max 12 distinct tags across the ENTIRE collection, and each repo
+         appears once under its primary tag -> at most 12 top-level categories."
+    ask "is 12 a real constraint or a placeholder? depends on N."
+  }
+
+  relation-ontology {
+    q      "phase 3's link/relation ontology is 8 literal '?' marks in v0.1"
+    known  "conflicts-with, x-link-with"
+    status "the substance of phase 3 is undefined"
+  }
+
+  phase-4 {
+    q      "phase_4 'outro/exclud/ex/selfreflect/invalidate' has NO body"
+    reading "an invalidation / self-audit pass over the finished INDEX?"
+    status "empty"
+  }
+
+  phase-grid {
+    q   "the header declares Phase_0.0 .. Phase_4.4 — 25 numbered slots.
+         the body defines only 1.1, 1.2, 1.3, 2.1, 2.2, 2.3."
+    ask "is the 5x5 grid real structure, or a table of contents for a
+         document that was never written? if the latter: delete it.
+         it currently implies 19 decisions that were never made."
+  }
+
+  bias-list {
+    q     "SEO / AI / abandon / omission / confusion / slop / hype / fakeness /
+           paywall are listed flat, but they aren't the same kind of thing —
+           some are detectable patterns, some are judgments, some overlap."
+    ask   "which of these are you willing to state as an operational test,
+           the way the superlative-in-promotional-register one is stated?"
+    note  "untestable flags become noise the reader learns to ignore"
+  }
+
+  stealth {
+    q      "'alternate user agents, Hermes obscura plugin, etc'"
+    status "I do not know what 'Hermes obscura' is. Not guessing."
+    flag   "aggressive anti-bot evasion may violate GitHub ToS. GitHub has a
+            documented REST API with generous authenticated rate limits —
+            almost certainly the correct path, and it removes this whole branch."
+  }
+
+  tag-ontology {
+    q      "the trailing section (struct!/serv!/port!, and the
+            re-de-con-in-ob-STRUCT-ion morphology tables)"
+    status "raw material for an ontology, not yet an ontology. your own note
+            says '(its a mess yet)' — agreed, and it is NOT deleted."
+    tier   2
+    why    "it is reference material, not session-resident instruction. it
+            belongs in a separate file, derived in its own session. loading
+            it into every run costs tokens for zero steering."
+  }
+}
+
+# ── notes ─────────────────────────────────────────────────────────────────
+
+notes {
+  tiers "
+    cost is length x residency, not length.
+      tier 0  CLAUDE.md, skill descriptions   every turn       length x turns
+      tier 1  SKILL.md body, bootstrap prompt once, then stays  length x 1
+      tier 2  reference files                 on demand        ~0 until read
+      tier 3  scripts                         never loaded     ~0
+    moving a section DOWN a tier is the highest-leverage edit available.
+    the tag-ontology braindump is the clearest tier-2 candidate here.
+  "
+
+  two-artifacts "
+    v0.1 conflates two things that want to be separate:
+      (a) a SPEC — what artifacts exist, what invariants hold  [declarative]
+      (b) a SKILL — how the agent should behave while building [steering]
+    same source, different projections. (a) outlives (b).
+    arguably the root paradigm confusion in v0.1.
+  "
+
+  empty-is-a-claim "
+    an empty section asserts 'no evidence yet'. that is honest and useful.
+    a section filled from imagination asserts something false.
+    open/ is large on purpose. it shrinks by ASKING, not by drafting.
+  "
+}
