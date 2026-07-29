@@ -33,6 +33,15 @@ ids are stable — refer to them by id.
     R2  scale: ~100 repos typical, ~300 max
     R3  gists are written by an agent reading, not by a program calling an api
         confidence: soft ("i guess 2"), revisitable
+    R4  query is ONE STANDING query for now
+        per-run queries are a stated long-term goal, deliberately deferred
+        reason: usable sooner, no premature generality
+    R5  the standing query:
+        curate, across github, the most relevant repos for every facet of ai,
+        where ai is taken to span the whole computing stack
+        facets named so far: os lang env ide research agent vcs db viz ...
+    R6  the goal is a SHORTLIST — a few options per facet — not only a map
+    R7  user is screening on the order of tens of thousands of repos
 
 ## G — guesses awaiting confirmation
 
@@ -46,6 +55,9 @@ claude's, made before the working rules existed. none are earned yet.
     G6  "reusable" splits: tooling reused by invocation, procedure reused by instruction
     G7  the Phase_N.M numbering is a false skeleton; the artifact chain is the real one
     G8  output token ceiling forces index rendering to be chunked or scripted
+    G9  O11 "from uni" / "from multi" = per-repo vs whole-collection
+    G10 the facet words the user speaks naturally (os, lang, ide, db, viz)
+        are plain domain terms, not latin roots. bears on C2.
 
 ## C — conflicts found
 
@@ -75,6 +87,13 @@ claude's, made before the working rules existed. none are earned yet.
     O11  bottom-up "from uni" (L112) / top-down "from multi" (L132) — meaning unconfirmed
     O12  aphorisms at L55-57 not operationalized
     O13  `trust` (L183) as a score — undefined
+    O14  seed list provenance. R7 says tens of thousands, R2 says the pipeline
+         ingests ~100-300. the funnel between them is nowhere in the file.
+    O15  is the facet list given and fixed, or discovered from the corpus?
+    O16  is `facet` the same as `tag`, the same as tree `[category]`,
+         or a third axis?
+    O17  selection rule. what makes a repo one of "the few options" for a facet.
+         L170 forbids rankings, R6 requires selection.
 
 ## U — regions not yet examined
 
