@@ -345,6 +345,105 @@ open {
   }
 }
 
+# ── ontology ──────────────────────────────────────────────────────────────
+# The trailing block of v0.1 (lines 232-357), read as evidence.
+# Your own label: "(its a mess yet)". It is not deleted and not rewritten.
+# What follows is a READING, with the reasoning shown so you can reject it.
+
+ontology {
+
+  what-is-there {
+    block-1 "a 4-branch tree, every leaf empty. header is a term cloud:
+             self-/auto-/meta-, memory, versality, flexivity, modality,
+             methodology, mechanicity/materiality. 16 empty slots."
+    block-2 "an abbreviated tree: struct! serv! script! modl! duct! port!
+             val! dimensionalis! — with children (form, soci, plex, sign,
+             pos / caus / vers, clud, cept, ject / spatialis, temporalis,
+             visualis)"
+    block-3 "each root expanded with its prefix family:
+             re-de-con-in-ob-STRUCT-ion, re-con-in-ex-CLUS-ion, ..."
+    block-4 "seven clusters separated by blank lines, ~3-8 members each"
+  }
+
+  notation {
+    reading "! = keep / settled     ? = candidate / unsure"
+    basis   "the marks fall on whole subtrees, and '?' sits on exactly the
+             items that are least distinguishable from their neighbours"
+    status  "INFERRED from position. not stated in v0.1. confirm or correct."
+  }
+
+  substance {
+    reading "these are Latin verbal roots — struct (build), serv (keep),
+             port (carry), duct (lead), script (write), val (worth),
+             cept (take), ject (throw), pos (place), form (shape)"
+    intent  "a CLOSED, GENERATIVE vocabulary: a small root set that spans
+             what software does, instead of ad-hoc tags like 'machine_learning'"
+    verdict "the intent is coherent with your own tagging rules — rule 3
+             (genericity) and the 12-tag collection cap both demand a small
+             closed set. this is not a random braindump."
+  }
+
+  # ── the finding ──
+  # This is the part I'd push back on, and it is structural, not stylistic.
+
+  discrimination-vs-coverage {
+    problem "tagging rule 3 sets a LOWER bound on how common a tag may be
+             ('generic enough to appear across multiple resources').
+             there is no UPPER bound. that missing bound is the defect."
+
+    why "a tag's usefulness is how much it tells you about a repo.
+         applied to fraction p of the collection, that is the binary entropy
+         H(p) = -p*log2(p) - (1-p)*log2(1-p):
+             p -> 1.0   H -> 0    applies to everything, says nothing
+             p -> 0.0   H -> 0    one-off, violates rule 3 anyway
+             p =  0.5   H  = 1    maximum
+         for NAVIGATION you want roughly even buckets: with N repos and a
+         12-tag cap, that is about N/12 per bucket."
+
+    consequence "the roots are selected for GENERATIVE COMPLETENESS —
+                 spanning every possible operation. tags need DISCRIMINATIVE
+                 POWER — splitting the collection. those are opposite
+                 objectives. every software project does 'struction' and
+                 'portation'. p ~ 1. H ~ 0."
+
+    resolution "the vocabulary is not wrong, it is at the wrong LAYER.
+                demote it from taxonomy to vocabulary:
+                  - as PRIMARY CATEGORY (the tree bucket)  -> fails, p~1
+                  - as DESCRIPTIVE VOCABULARY inside the
+                    'how it is' facet (technology / technicality) -> fits well
+                get primary categories from something that actually splits
+                the collection — domain, function, or what the thing is FOR."
+    status "proposed. not applied to the file."
+  }
+
+  clusters-are-not-a-partition {
+    saw   "block-4's seven clusters share members:
+             modelisation  in C, D, F
+             manifestation in A, E
+             modification  in E, G
+             servation     in B, G
+             version       in A, G"
+    breaks "INDEX rule: 'each repo appears ONCE under its primary tag'.
+            a unique primary requires the category set to be a partition,
+            or at least to support a designated winner. overlapping clusters
+            with repeated members cannot yield one."
+    ask   "is the repetition meaningful (same operation seen from different
+           aspects — which would make these FACETS, not categories) or is it
+           drafting residue? the answer decides whether the clusters can be
+           categories at all."
+  }
+
+  linguisticality-is-two-things {
+    saw    "2.1 defines `linguisticality` as a per-repo ATTRIBUTE block
+            (language percentages + roles).
+            the imperfect-example uses `# [linguisticality]` as a CATEGORY
+            heading in the tree."
+    breaks "an attribute every repo has cannot also be a bucket only some
+            repos go in — not while each repo appears exactly once."
+    ask    "which one is it?"
+  }
+}
+
 # ── notes ─────────────────────────────────────────────────────────────────
 
 notes {
