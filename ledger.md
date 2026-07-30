@@ -574,6 +574,29 @@ self-/meta- prefixes: NOT a clean binary (claude proposed this; user's n3 shows
         (b) self-suspicion over self-evidence
         (avoid "over reification": user said reification can be good, F3)
 
+## PR — the protocol module (module 2). draft seed.
+
+decoupled modularity: a SEPARATE module that CROSS-LINKS the epistemology
+nodes (already written) rather than restating them. not limited to the
+basic list — user signalled more exists; claude seeds from real practice,
+user extends.
+
+each line = an operational rule -> the epistemology node it projects.
+    p1  short atomic lines, no walls            -> n6   (blindness: HARD req)
+    p2  one topic per exchange                  -> n1 n5
+    p3  ask before acting; no unilateral moves  -> n4
+    p4  mark every claim a guess till confirmed -> n3
+    p5  surface collisions/errors, never silence-> n10  (L1.3)
+    p6  living ledger: resolved/open/guess/superseded -> n10
+    p7  stable ids; refer by id                 -> n10
+    p8  classify each item first: decode/hole/conflict -> n2
+    p9  annotate in place; never delete the shadow (a-plus) -> n3 n10
+    p10 pace to the user's understanding, not production -> n1 n8
+
+    p6-p9 are NEW beyond the basic list (drawn from this session's practice).
+    open: user's own additions — "not limited only to this basic list".
+    conditions/enforcement grain (before/during/after, L2.3) still TBD.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
