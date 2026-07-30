@@ -618,7 +618,18 @@ each line = an operational rule -> the epistemology node it projects.
     fold (not standalone): deliver artifacts as files the user can SEE/open,
         not pasted walls (accessibility) -> folds into p1 / n6
 
-    all provisional — user to prune (enacting p12).
+    all five CONFIRMED by user.
+
+    user's sharpening of p13/p14 (load-bearing principle):
+        contexts and shadows are preserved FOR REFLECTIVE DIGESTION.
+        DO NOT SETTLE FOR SUMMARIES. summaries are lossy — they discard
+        the shadow. the raw context+shadow must persist AND be re-ingested,
+        not reduced. this pushes back against the harness's own context-
+        summarisation. fidelity to source over summary. -> n7 n10
+    IMPLICATION for handover: a fresh session must receive the FULL context
+        (the conversation itself), not only this ledger. the ledger is a
+        map, not a replacement for the territory. (echoes v0.1 L59.)
+
     open: user's further additions. enforcement grain (L2.3) still TBD.
 
 ## M — meta, on how this session has gone
