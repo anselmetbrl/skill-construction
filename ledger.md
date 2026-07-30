@@ -657,3 +657,86 @@ each line = an operational rule -> the epistemology node it projects.
     M4  claude assists. claude does not run ahead.
     M5  claude overread L178 as "the index replaces reading the repos".
         user corrected: it is orientation, not substitution. see R9.
+
+## S2 — session-2 resolutions: the repo-node & the index model
+
+building/auditing the spec from the convergence. the latest layer —
+supersedes earlier where noted. audit before trusting; still seeds, not law.
+
+    immutability altitudes (refines C1)
+        S2.1  three layers, decreasing fixity:
+                raw dossiers   git-layer, fetched fact   IMMUTABLE, never rewritten
+                compiled       gist / graph / tags       recompilable (inferred)
+                rendered       the index layout          freely re-projectable
+              writeback is legitimate only ABOVE the raw layer.
+
+    the repo-node (the templated unit)
+        S2.2  display != comparison. the node SHOWS quantitative metadata
+              (stars/forks/contribs/dates) but the index never ranks or compares
+              by them. relevance-ranking runs on relevance-to-query, not counts.
+              reconciles the v0.1 header line with A20 / A22.
+        S2.3  the fold = two altitudes of ONE datum (not duplication):
+                glance line   compact scan-signal: lang% · stars · contribs ·
+                              alive/dead · official-description (github top-right)
+                #git unfold   the nuanced explication (needs room; bloats glance)
+              L3.3 "lives once" governs the SOURCE; rendering at two resolutions
+              is A25's gradual-unfolding, not a violation.
+        S2.4  metadata is ORIGIN-TRUTH -> lives in #git (fetched, factual, not
+              inferred), beside readme/website links. the glance line is a
+              PROJECTION of #git's key fields, not a separate data home.
+        S2.5  the trinity per node:
+                #git    origin-truth   metadata · shortcut-links · official-desc
+                #gist   inferred       what / why / how
+                #graph  relations      decoupled module (see C1 / S2.1)
+        S2.6  #gist spine FIXED, leaves EARNED:
+                what-it-is  (notion)
+                why-it-is   (question)
+                how-it-is   (mediation) -> technology  (internal: build/langs/arch)
+                                           technicality (external: deps/stack-fit)
+              leaves = grounded quote-nodes, as many as the repo yields,
+              #void when absent, never padded (don't block emergence — n3 / L3.4).
+              parenthetical glosses = inspiration-labels, not locked schema.
+        S2.7  alive/dead = SIGNIFICANT-update signal, evidence not verdict.
+              naive last-commit is a trap (bot bumps, merges, typo-fixes).
+              surface: last release/tag · non-bot filtered commits · maintainer
+              engagement. glance = light cue (active/stale?/#void); #git = the
+              evidence. exact heuristics stay [evolve], tuned at prototype.
+
+    the index model (SUPERSEDES focus-1's "tree")
+        S2.8  the index is a FLAT, relevance-ordered LIST of repos, each ONCE.
+              the TREE is only intra-repo (glance -> git/gist/graph unfold).
+              no category-parent nesting -> the primary-tag problem DISSOLVES
+              (no single home to pick). supersedes the tree-spine + reference-
+              edges proposal floated earlier this session.
+        S2.9  navigation = a TOC/legend of categories (the vocabulary bird's-eye)
+              + IDE text-search on inline tags -> jump between a category's repos,
+              no nest-unfolding. the "graph" is realized by multi-tags + search,
+              not by nesting or links.
+              tradeoff (ACCEPTED): a flat list SCATTERS a category's repos; you
+              re-group on demand via search. static grouping traded for
+              no-lossiness + multi-tag reachability. fits the IDE workflow.
+        S2.10 tags render as a DEDICATED tag-line under the glance (option b):
+              always visible, unfolded, searchable; keeps line-1 lean.
+        S2.11 tag quality = NON-REDUNDANCY against the whole system
+              (sharpens the earlier genericity-band, which was incomplete):
+                fails  redundant with a field   #rust  (lang% has it)
+                       a systemic given         #local (assumed anyway)
+                       too broad to partition   #ai (index IS ai) · #memory
+                                                (broad + non-technological)
+                passes a distinctive technological FUNCTION that partitions:
+                       vectorisation · conversion · transcription · visualisation
+              the 12 are derived AFTER the whole collection (discrimination is a
+              set-property, not a repo-property). [big-thread, flagged NOT built:
+              the "passes" set is the user's root-vocabulary re-entering as the
+              good tags — cf ledger L4.3 BIG THREAD.]
+
+    layout as projection (the user's insight)
+        S2.12 CONTENT is decoupled from LAYOUT. once phases 1-2-3 are processed,
+              a layout is a cheap RE-PROJECTION — no reprocessing of fields/
+              relations; multiple layouts = duplicate the rendered file, re-
+              arranged, model untouched.
+              v1: ONE primary layout (flat-list + search, S2.8-10). the DECOUPLING
+              is adopted now (costs nothing, keeps multi-layout cheap LATER);
+              the multi-render itself is DEFERRED, not blocked.
+              n11: "one layout now + architecture that keeps more cheap", not
+              "all layouts" vs "one hard-wired layout".
