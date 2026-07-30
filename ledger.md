@@ -304,6 +304,19 @@ session 2. specing the complement to the user's own two files
               wisdom generalises. user will adjust; format must fit
               the needs communicated all session.
 
+    L2 — the stance file — ANSWERED
+        L2.1  affirmative framing only. no "don'ts".
+              state the practice positively; the negation is implied.
+              a general sdd-spec list.
+        L2.2  describe the light RELATIVE to the shadow it answers.
+              keep the failure in view, but frame the fix positively.
+              not optimist-utopia bs.
+        L2.3  enforcement at all three grains: before / during / after
+              every agentic pass. leverage opus multi-pass if feasible.
+              (claude noted: user finds claude's prose obtuse. write plainer.)
+        L2.4  both epistemology AND protocol, but DECOUPLED modularly.
+              two modules, joined not merged, not fragmented either.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
