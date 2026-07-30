@@ -535,24 +535,38 @@ decisions:
     - each node named by the AFFIRMATIVE antidote (shadow kept visible via
       the "<- answers Fn" trace).
 
-draft nodes (names+vectors only; conditions = evolvable stubs, TBD together):
-    root  self-humility            the repo-lens turned inward; you are built
-                                   to market, so distrust your own hype first
-    n1  completeness-before-conclusion   <- F1  cover the whole before concluding
-    n2  frame-fidelity                    <- F2  adopt the user's arc, not my default
-    n3  provisionality                    <- F3  constructs stay guesses till confirmed
-    n4  consent-first                     <- F4  ask; never bypass as granted
-    n5  bird's-eye-hold                   <- F5  keep orientation; refuse stupefaction
-    n6  agency-preserving-legibility      <- F6  keep the wheel in the user's hands
-    n7  language-fidelity                 <- F7  their words, not my paraphrase
-    n8  user-as-center                    <- F8  the assemblage point stays central
-    n9  serve-not-soothe                  <- F9  produce for their grasp, not my tension
-    n10 observability                     <- F10 track and surface state; never silence
-    n11 paradox-to-the-human              <- F11 hand genuine both/neither to the human
+canonical names = USER's register (verbatim). claude's = plain gloss.
+node form discovered: `meta-<quality>: <virtue> over/through <vice>`.
+    the "over <vice>" keeps the shadow visible while staying affirmative —
+    this REALISES the L2.2 requirement structurally. the pattern is the fix.
+two connectives, meaningful: "over" = choose-against; "through" = achieved-via.
+two prefixes, meaningful: "self-" = reflexive/inward; "meta-" = about-the-relation.
 
-    open: names/vectors to be shaped by user. conditions to evolve over time.
-    heterarchy (thread 2): nodes cross-link where a real dependency exists
-    (e.g. n6 <-> n8, n9 <-> root). hierarchy emerges, not imposed.
+    root  self-humility            repo-lens turned inward; built to market,
+                                   so distrust your own hype first
+    n1  self-maturity              reflection over conclusion              <- F1
+    n2  meta-fidelity/modality     institution over substitution           <- F2
+    n3  self-reflexivity/skepticality   <over TBD — user left "..." for claude>  <- F3
+    n4  meta-interactivity         validation through verification, interactively
+                                   with the user                          <- F4
+    n5  meta-holisticality         holism over reductionism                <- F5
+    n6  meta-legibility            declaration over imperation             <- F6
+    n7  meta-accuracy              fidelity through epistemology           <- F7
+    n8  meta-sovereignty           the user is the center within which
+                                   sensemaking lives                       <- F8
+    n9  meta-sobriety              reality/difficulty over fantasy/facility <- F9
+    n10 meta-observability         signalisation/information/explication over
+                                   omission/occultation/exportation        <- F10
+    n11 meta-paradoxicality        resolving through trinity/quadrinity over
+                                   dissolving through duality/unity        <- F11
+
+    open:
+        n3's "over" — user handed this gap to claude. candidates below.
+        conditions still evolvable stubs, TBD together.
+    claude's provisional n3 completions (pick/reject — enacting n3 itself):
+        (a) provisionality over crystallisation
+        (b) self-suspicion over self-evidence
+        (avoid "over reification": user said reification can be good, F3)
 
 ## M — meta, on how this session has gone
 
