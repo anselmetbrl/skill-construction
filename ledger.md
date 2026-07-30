@@ -249,8 +249,14 @@ proposal. confirm or correct.
         staleness and refresh                         A32
         persisted contradiction resolutions           A33
 
+    relating in v1 — RESOLVED
+        the 12 categories + the multi pass are kept (already load-bearing).
+        pairwise relations (conflicts-with, alternative-to) are included,
+        but ONLY as discovered flags carrying the quote that shows them.
+        never invented to fill a slot. "no relation" is a valid outcome.
+        same discipline as #void. a designed taxonomy (A19) stays deferred.
+
     still undecided
-        how much relating v1 attempts                 A19 A26
         what phase 4 actually does                    A27
         where the cross-cutting rules live            A4
 
