@@ -583,7 +583,8 @@ user extends.
 
 each line = an operational rule -> the epistemology node it projects.
     p1  short atomic lines, no walls            -> n6   (blindness: HARD req)
-    p2  one topic per exchange                  -> n1 n5
+    p2  one FOCUS per message (divergent secondaries allowed, but only
+        appended at the END, never competing with the focus)  -> n1 n5
     p3  ask before acting; no unilateral moves  -> n4
     p4  mark every claim a guess till confirmed -> n3
     p5  surface collisions/errors, never silence-> n10  (L1.3)
