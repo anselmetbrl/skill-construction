@@ -14,8 +14,8 @@ how to read this file:
 
     target:   indexing_autoinfo_hg_v0.1.md
     goal:     sdd spec, then reusable pipeline from it
-    updated:  2026-07-29
-    session:  1
+    updated:  2026-07-30
+    session:  2
 
 ## method
 
@@ -89,6 +89,11 @@ claude's, made before the working rules existed. none are earned yet.
         shortlist  the few per facet (R6). selection is the point, L170 does not bind.
         if so, O17 is not a contradiction but two artifacts written as one.
         [unconfirmed: A22 answered "idk" — still open]
+        [S2 resolved: ONE artifact. the index IS the shortlist —
+         pre-curation already narrows the field; ranking-for-relevance
+         orders attention WITHIN the tree, no separate leaderboard.
+         each repo node carries its git/gist/graph facets as templated.
+         the two-outputs reading is retired]
     G12 relating is the heart of the pipeline, gisting is feedstock for it.
         would invert the file's weighting: phase 2 has ~70 lines,
         phase 3's relation ontology is eight `?`.
@@ -100,6 +105,14 @@ claude's, made before the working rules existed. none are earned yet.
     C1  L45 immutability across layers  vs  L152 writeback into gist frontmatter
         [still open. V's relating-resolution narrows it but where discovered
          relations get WRITTEN was never settled]
+        [S2 resolved: immutability holds at the ORIGIN, not everywhere.
+         raw dossiers (git layer) = immutable, never rewritten.
+         gists (inferred) = recompilable, so writeback is legitimate there.
+         relations live as a DECOUPLED module in two faces:
+           · a relation-index node (the graph view) — primary home [guess]
+           · a bounded, refactorable block mirrored inside each gist,
+             so the index stays standalone (v0.1 L177)
+         condition: relations stay modular, never smeared into gist prose]
     C2  L146 tag format `lowercase_underscore`  vs  L232-357 latin-root vocabulary
         [resolved: A18 — roots are inspiration only, deferred for v1;
          plain lowercase_underscore tags win. BUT see the L4.3 BIG THREAD:
@@ -164,6 +177,8 @@ claude's, made before the working rules existed. none are earned yet.
          [partially answered: A22 "idk" + V relating-resolution.
           the index refuses verdicts; selection stays the user's act.
           G11's two-outputs reading remains unconfirmed]
+         [S2: G11 retired — one artifact. relevance-ordering (not verdicts)
+          orders attention within the single index tree]
 
 ## U — regions not yet examined
 
