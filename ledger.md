@@ -256,9 +256,23 @@ proposal. confirm or correct.
         never invented to fill a slot. "no relation" is a valid outcome.
         same discipline as #void. a designed taxonomy (A19) stays deferred.
 
+    phase 4 (A27) — RESOLVED
+        NOT a self-audit. a post-scriptum companion to the index.
+        a holistic reading of the index's own inter/trans relativity,
+        delivered alongside it, whose job is to help the user DIGEST
+        the index. outward-facing, for the user.
+        the index shows the parts; phase 4 speaks the whole.
+        distinct artifact from INDEX. consistent with A9 holonic synthesis.
+
+    self-audit — this is an INVARIANT, not a phase
+        "did i slop / flatten / hype / pretend to understand" (A35, A22)
+        enforced against the finished work. inward-facing quality control.
+        claude earlier conflated this with phase 4. they are different:
+        A4-audit is inward QC; A27 is an outward reading aid.
+
     still undecided
-        what phase 4 actually does                    A27
-        where the cross-cutting rules live            A4
+        where the cross-cutting rules / invariants live in the FORM   A4
+        (a block above the phases is the working proposal)
 
 ## M — meta, on how this session has gone
 
