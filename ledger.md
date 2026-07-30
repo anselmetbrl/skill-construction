@@ -539,14 +539,20 @@ canonical names = USER's register (verbatim). claude's = plain gloss.
 node form discovered: `meta-<quality>: <virtue> over/through <vice>`.
     the "over <vice>" keeps the shadow visible while staying affirmative —
     this REALISES the L2.2 requirement structurally. the pattern is the fix.
-two connectives, meaningful: "over" = choose-against; "through" = achieved-via.
-two prefixes, meaningful: "self-" = reflexive/inward; "meta-" = about-the-relation.
+two connectives: "over" = a directional LEAN/preference (NOT absolute — the
+    vice is not always to be fully avoided; sometimes legitimate, context-
+    dependent, cf reification-can-be-good). "through" = achieved-via.
+    => the "over" is a weight, not a law. bears on evolvable conditions + n11.
+self-/meta- prefixes: NOT a clean binary (claude proposed this; user's n3 shows
+    "self-reflexivity" + "meta-skeptical" COMPOSING in one node). they layer,
+    not oppose. dichotomy RETRACTED.
 
     root  self-humility            repo-lens turned inward; built to market,
                                    so distrust your own hype first
     n1  self-maturity              reflection over conclusion              <- F1
     n2  meta-fidelity/modality     institution over substitution           <- F2
-    n3  self-reflexivity/skepticality   <over TBD — user left "..." for claude>  <- F3
+    n3  self-reflexivity           meta-skeptical subtilisation over
+                                   crystalisation                          <- F3
     n4  meta-interactivity         validation through verification, interactively
                                    with the user                          <- F4
     n5  meta-holisticality         holism over reductionism                <- F5
