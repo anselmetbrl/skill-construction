@@ -21,11 +21,10 @@ ids are stable — refer to them by id.
         no files written unless asked
         short lines, no walls
 
-    order:
-        1  purpose        <- current
-        2  frame
-        3  ontologies
-        4  artifacts + mechanics
+    order given by user:
+        1  meta      how an llm consumes an instruction file
+        2  file      what this pipeline is
+        3  form      notation, one file, key-value        <- not yet opened
 
 ## R — resolved
 
@@ -123,6 +122,137 @@ claude's, made before the working rules existed. none are earned yet.
     U8   L137-146  tagging rules          (read, not interrogated)
     U9   L170-178  index rendering rules  (read, not interrogated)
     U10  L186-222  nested-tree format and example
+
+## A — answers to Q1-Q38
+
+user's own words, compressed. not interpreted.
+
+    fetch
+    A1   github api for structured data; scraping for website / wiki / the rest
+    A2   `1.1` = crawl+scrape, then normalise / selfheal / prepare llm-readability
+         cohesively, before phase 2 begins
+    A3   input = a list of links, plus an optional contextual prompt when pertinent
+    A5   facets are a FIXED list the user gives.
+         some seeds will mistakenly be indexes (awesome-lists etc) —
+         flag and skip. never rabbithole into them.
+
+    naming
+    A6   facets ARE tags. categorical facets as tags. one thing, not three.
+    A15  the tag list is INSPIRATION, not a whitelist.
+         guard against the llm deriving synonyms instead of distinct high-signal tags.
+    A16  4 per repo / 12 collection-wide because more tags saturate signal
+         and llms generate synonymous slop.
+         the 12 are derived AFTER every repo is individually tagged.
+    A17  `#void` = placeholder for unknown/empty, so the llm doesn't hallucinate
+         when a repo isn't informative enough.
+    A18  the latin-root vocabulary is the user's own etymological sense-making.
+         a mess to convey to an llm. inspiration only. PREMATURE FOR V1.
+    A23  the 12 max categories are inferred after individual tagging.
+         avoid duplicate placement or 300 links become a 900-line index.
+    A28  which draft is which:
+            L258-278   most refined. possibly too distilled even for the user.
+            L282-304   previous refinement. comprehensive, not llm-legible.
+            L308-356   earlier distillation from a much bigger haystack.
+                       saturated with not-so-relevant terms.
+    A29  the goal was isolating each word's essential unique etymological meaning
+         beneath prefixes/suffixes.
+         `~` = a soft separator. connections deliberately flaky, intuitive, not fixed.
+
+    gist
+    A7   uni  = augment from the repo alone.
+         multi = after ALL uni is done, augment each again from the evolved
+                 context of the whole, relatively.
+    A8   `2.3` = a further complementary pass from the evolved context.
+         more self-reflexive / synthesising.
+    A9   "higher-order synthesis" = synthesis from holistic holons,
+         not reductionism.
+    A10  "contribution/participation" = contributors, and whether they are
+         fake / abandoned / weak / active. same suspicion as hype stars.
+    A11  the vice→virtue table is a mess. intent was to flag vices;
+         naming the virtues may deter from actually flagging the vices.
+    A12  the ten items under `corruption` came from experience + braindump.
+    A13  C3 was simply messiness.
+    A14  unfree = paywall sabotage. cloud hosting is fine;
+         artificial limits on self-hosting are not.
+    A20  qualities to compare = what a project claims to be, its features,
+         dependencies, technologies/technicalities.
+         NOT stars, dates or counts.
+
+    relate
+    A19  the relation ontology is PREMATURE. for v1 either
+         standard types (similarity/alternativity, conflictuality, synergy)
+         or possibly left formless. open.
+    A21  `trust` is subtractive — gradually invalidated by accumulation of
+         red flags and deceptions.
+    A22  the fear behind L170: an index that misleads, or that claims to
+         understand on the user's behalf. impartial relevance, no verdicts.
+    A24  `linguisticality` as a tree category was probably just an example.
+    A25  the nested tree matters — gradual hierarchical continuity unfolding.
+         the drawn version is an imperfect sketch.
+    A26  gisting as augmented git/origin is crucial.
+         relating may be too much to ask of an llm agent for v1. undecided.
+
+    egress
+    A27  phase 4 is not a second index. it complements the index's
+         digestibility and navigability — conveying what emerged
+         self-reflexively from the holonic analysis.
+         possibly adversarial. undecided.
+
+    operation
+    A30  each run produces a STANDALONE index.
+    A31  tens of thousands already screened. thousands remain,
+         over many runs of tens to hundreds.
+         long-term meta memory in the skill = premature.
+    A32  staleness / refresh = premature for v1.
+    A33  contradiction resolutions live in the user's head and pkm.
+         out of scope for v1.
+    A34  removal from an index, if ever, only by the user.
+    A35  success = a non-sloppy index tree that delivers birdseye view,
+         non-slop augmentation, and digestion rather than congestion.
+         explicitly not: verbose wordiness, corner-cutting that optimises
+         the task's surface instead of the user's experience.
+
+    form
+    A36  one file for v1. declarative. it doubles as the high-quality
+         blueprint signal for later imperative construction.
+    A37  syntax-agnostic. coding-principled (lisp/nix/rust).
+         modular key-value-like strings.
+         density target: a line of poetry — rich in signal.
+         NOT verbose paragraphs. NOT reductionist minimal mashups.
+    A38  the skill is invoked explicitly by name. the user names it at the end.
+         a long modular working name may be inferred meanwhile.
+
+    unanswered
+    A4   where the cross-cutting rules live — "idk". still open.
+
+## V — v1 scope, derived from the answers
+
+proposal. confirm or correct.
+
+    in v1
+        fixed facet list, given by the user           A5 A6
+        index-is-an-index detection, flag and skip    A5
+        github api + targeted scraping                A1
+        normalise/selfheal before gisting             A2
+        per-repo gist from the repo alone             A7 uni
+        second pass over each repo from the whole     A7 multi
+        tagging: 4 per repo, 12 collection-wide       A16 A23
+        `#void` instead of hallucinating              A17
+        red-flag accumulation as subtractive trust    A21
+        nested-tree index, standalone                 A25
+        each run standalone                           A30
+
+    deferred by the user, explicitly
+        latin-root tag vocabulary as a whitelist      A18
+        a designed relation ontology                  A19
+        long-term memory across runs                  A31
+        staleness and refresh                         A32
+        persisted contradiction resolutions           A33
+
+    still undecided
+        how much relating v1 attempts                 A19 A26
+        what phase 4 actually does                    A27
+        where the cross-cutting rules live            A4
 
 ## M — meta, on how this session has gone
 
