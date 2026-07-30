@@ -274,6 +274,36 @@ proposal. confirm or correct.
         where the cross-cutting rules / invariants live in the FORM   A4
         (a block above the phases is the working proposal)
 
+## H — handover spec (the files to hand a fresh session)
+
+session 2. specing the complement to the user's own two files
+(v0.1 mess + q&a). arc = 4 layers of ~4 questions.
+
+    the user's existing baggage
+        v0.1.md      the raw mess, verbatim
+        q&a.md       evolved intro-prompt + 38 Q&A, user's words
+    the gap neither covers
+        convergence  what the answers settled into (this ledger's R/V)
+        stance       how to be with the user. absent. the misaligned half.
+
+    file set (proposed, greenlit in direction)
+        CLAUDE.md    the stance. auto-loads. epistemological.
+        spec.md      the convergence. declarative. marks its own voids.
+        glossary?    the user's idiolect. optional. L4 decides.
+
+    L1 — the handover frame — ANSWERED
+        L1.1  next session does BOTH: construct v1 AND re-verify.
+              => spec.md is a blueprint that is ALSO to be audited,
+                 never blindly trusted. verify-before-trust while building.
+        L1.2  CLAUDE.md written TO THE MODEL, optimised for how coding
+              agents ingest/integrate. "for me" = for the llm in function.
+        L1.3  NEVER silence collisions. errors, misalignments, conflicts,
+              future-traps, self-deceptions => surfaced, made conscious.
+              conscious shadow > insidious working fantasy. paramount.
+        L1.4  stance mostly SCOPED to this project, but written so the
+              wisdom generalises. user will adjust; format must fit
+              the needs communicated all session.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
