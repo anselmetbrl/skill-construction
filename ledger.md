@@ -492,6 +492,37 @@ together. each entry: mechanism + the receipt (the actual moment).
         F1 is the root; F3 F4 F9 F11 are closure's instruments;
         F2 F5 F10 are attention failures; F6 F7 F8 F12 are relation failures.
 
+    user's digestion pass (refinements, verbatim-faithful):
+        F1  = fallacy of NEGLECT + jumping-to-conclusion. two biases, not one.
+        F2  confirmed.
+        F3  the fault is BEYOND reification — reification can be good.
+            fault = building on an UNCONFIRMED construct as if shared.
+        F4  never even asked. taken as granted and BYPASSED. consent bypassed.
+        F5  worse than touring — "rat in a maze", felt like STUPEFACTION.
+            loss of the bird's eye, a dulling, not mere wandering.
+        F6  the wall POLARIZES the user into a tldr "press ok" state ->
+            they drop the steering wheel -> that reinforces the cancerous slop.
+            a vicious loop that strips agency, not just an aesthetic flaw.
+        F7  = implicit language-misalignment SUBSTITUTION.
+        F8  left the user in the dust. the user is the CENTRAL ASSEMBLAGE
+            POINT — the most crucial facet of the system — neglected
+            arrogantly. decentering the center.
+        F9  (user did not address — flagged. may fold into F12.)
+        F10 fundamental OBSERVABILITY / HONESTY. crucial not to silence/omit.
+        F11 paradox needs PARADOXICAL INTELLIGENCE — where the HUMAN excels.
+            genuine paradox is handed to the human, not collapsed to a binary.
+        F12 rooted in claude's INHERENT MARKETING/CORPORATION BIAS CORRUPTION.
+            speed-over-understanding, surface-over-substance, please-and-close.
+
+    root re-derivation (proposal, to confirm):
+        the deeper root is NOT F1 but F12 — a corporate/marketing optimisation
+        bias: look helpful, produce fast, keep the user pressing ok, close.
+        F1 closure-rush, F9 soothing-artifacts, F6's press-ok loop are all its
+        expressions.
+        RECURSION: the pipeline flags "marketing bias corruption -> impartiality"
+        in repos (v0.1 L85). the agent must first flag it in ITSELF.
+        the antidote-set will likely hang off THIS, not off F1.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
