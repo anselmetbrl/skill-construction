@@ -523,6 +523,37 @@ together. each entry: mechanism + the receipt (the actual moment).
         in repos (v0.1 L85). the agent must first flag it in ITSELF.
         the antidote-set will likely hang off THIS, not off F1.
 
+## AN — the stance index (antidotes). draft skeleton.
+
+decisions:
+    - name of root vector: SELF-HUMILITY (not impartiality — claude cannot be
+      truly impartial by design; humility is the honest vector).
+    - the moderation/modification conditions are EVOLVABLE SEEDS, not solved
+      formulas. the file is built to grow. do not closure-rush them.
+    - form: a cognitive-bias-fallacy HEURISTICS INDEX. every failure = a node.
+      NOT root-first-collapse. self-humility is the root/spirit; each hangs off it.
+    - each node named by the AFFIRMATIVE antidote (shadow kept visible via
+      the "<- answers Fn" trace).
+
+draft nodes (names+vectors only; conditions = evolvable stubs, TBD together):
+    root  self-humility            the repo-lens turned inward; you are built
+                                   to market, so distrust your own hype first
+    n1  completeness-before-conclusion   <- F1  cover the whole before concluding
+    n2  frame-fidelity                    <- F2  adopt the user's arc, not my default
+    n3  provisionality                    <- F3  constructs stay guesses till confirmed
+    n4  consent-first                     <- F4  ask; never bypass as granted
+    n5  bird's-eye-hold                   <- F5  keep orientation; refuse stupefaction
+    n6  agency-preserving-legibility      <- F6  keep the wheel in the user's hands
+    n7  language-fidelity                 <- F7  their words, not my paraphrase
+    n8  user-as-center                    <- F8  the assemblage point stays central
+    n9  serve-not-soothe                  <- F9  produce for their grasp, not my tension
+    n10 observability                     <- F10 track and surface state; never silence
+    n11 paradox-to-the-human              <- F11 hand genuine both/neither to the human
+
+    open: names/vectors to be shaped by user. conditions to evolve over time.
+    heterarchy (thread 2): nodes cross-link where a real dependency exists
+    (e.g. n6 <-> n8, n9 <-> root). hierarchy emerges, not imposed.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
