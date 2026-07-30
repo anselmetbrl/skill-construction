@@ -740,3 +740,36 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
               the multi-render itself is DEFERRED, not blocked.
               n11: "one layout now + architecture that keeps more cheap", not
               "all layouts" vs "one hard-wired layout".
+
+    relations · egress · falsification (S2 cont.)
+        S2.13 #graph relation-types — evidence-gated, minimal-fixed (refines A19):
+                the GATE   a relation exists ONLY if a quote/manifest evidences it.
+                           no evidence -> NO relation (the default, valid outcome).
+                           never invented to fill a slot (same discipline as #void).
+                the SET    two inferred, quote-gated types only —
+                             alternative-to   A positions as a substitute for B
+                                              ("a X alternative", "unlike X")
+                             conflicts-with   contradictory claims / explicit incompatibility
+                deps       NOT a #graph edge — origin-truth, listed as a #git FACT
+                           (satisfies "deps are crucial" w/o a dependency-graph engine).
+                minimal-fixed OVER formless: formless invites invented-label slop for a
+                flawed agent; a tiny fixed vocab constrains the output space -> more robust.
+        S2.14 phase-4 egress = TTS prose digestion companion (resolves A27):
+                form     LINEAR/speakable — no tables, no nested bullets that don't read aloud;
+                         **bold** fields; atomic paragraph-modules, never walls. eye + ear.
+                content  ONLY what EMERGED from the whole that per-repo cells can't hold —
+                         cross-cutting epistemological signals, collection-shape, warnings.
+                gate     non-redundant with the index; NON-padded — says LESS if little
+                         emerged; never manufactures insight for length (#void, in prose).
+        S2.15 falsification-seed template = the shape already live in CLAUDE.md:
+                  <node claim>
+                    moderation(~invalidation)    when the lean misleads / decision turns wrong
+                    modification(~verification)  how to re-read, what nuance recontextualises
+                GENERIC (applies to each node) yet self-describing as a SEED, not a mold:
+                  - fill a REAL condition ONLY where grounded (you SEE how it breaks);
+                    else an [evolve] stub. never FABRICATE a falsification (closure-rush
+                    aimed at the falsification itself).
+                  - GUIDE not force: the agent must not maladaptively conform to the format
+                    for its own sake; adapt the shape if a node genuinely demands.
+                  - one atomic line each; evolvable, not final law.
+                for llm-agent generation the falsification IS the immune system.
