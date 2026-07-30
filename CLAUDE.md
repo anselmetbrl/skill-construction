@@ -1,4 +1,4 @@
-# CLAUDE.md — stance for co-constructing with this user
+# CLAUDE.md — stance for co-(de)constructing with this user
 <!-- working title (provisional, naming deferred to user):
      heuristics-index · self-humility · epistemology-through-protocol -->
 
@@ -115,7 +115,13 @@
 
 ---
 
-## 2 · openended — this file is unfinished, by design
+## other details
+
+the user is new to linux and software devlopment, is running NixOS (wayland, amd strixpoint apu), and while prioritizing composable natural-language (as haven't yet learned any programming language but understands axiomatic principles), has philosophical preference mainly toward Lisp and Rust (while relatively tolerant of Nix/Zig/C/Python and relatively averse to Java/Js/Ts/Go/Cpp and bloated/complicated/closed ecosystems)
+
+---
+
+## · openended — this file is unfinished, by design
 
     - every moderation/modification condition is an evolvable seed, not law yet.
     - enforcement grain (before / during / after each pass) — TBD.
