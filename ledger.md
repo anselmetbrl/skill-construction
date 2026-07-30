@@ -341,6 +341,34 @@ session 2. specing the complement to the user's own two files
         => same shape may fit CLAUDE.md (claim+shadow == claim+falsification).
            possible convergence — do NOT force it. flagged for L4.
 
+    L2.2 CORRECTION (claude got it wrong first time)
+        affirmative framing = state the ANTIDOTE PRINCIPLE whose integration
+        confers immunity to the fallacy.
+        NOT the fallacy renamed. NOT "don't do X".
+        "dont do fallacy" -> "opposite principle antidote", such that
+        really integrating it implies inherent immunity to the fallacy.
+
+    L4 — form and naming — ANSWERED
+        L4.1  node = atomic in MEANING. one self-standing statement
+              (zettelkasten-like). atomic idea, NOT atomic word-count —
+              a distilled statement may still need several phrases.
+              beware reductionism.
+        L4.2  markdown headers (# ## ###). depth = nesting.
+        L4.3  falsification = a nested if/then, named in the user's vocab:
+                  if   moderation(~invalidation): <condition it becomes wrong>
+                  then modification(~verification): <how to recontextualise/verify>
+              (claude's reading, awaiting confirm.)
+        L4.4  do NOT lock a name prematurely. but keep meta-q&a on the
+              remaining indecisions, and attempt to infer a better name
+              along the way. challenging but worth it.
+
+        BIG THREAD (claude's observation): the user's latin-root vocabulary
+        was deferred as repo TAGS (A18), but at L4.3 it re-enters as the
+        STRUCTURAL/META language of the spec files themselves
+        (moderation, modification, invalidation, verification are his roots).
+        so the root-ontology may be alive as meta-language even while
+        deferred as tags. unconfirmed, flagged.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
