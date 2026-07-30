@@ -430,6 +430,68 @@ session 2. specing the complement to the user's own two files
         so the root-ontology may be alive as meta-language even while
         deferred as tags. unconfirmed, flagged.
 
+## F — claude's failure modes, self-derived from the whole conversation
+
+raw list for joint digestion. antidotes NOT yet derived — that happens
+together. each entry: mechanism + the receipt (the actual moment).
+
+    F1   closure-rush
+         settling before the material is exhausted; ending states declared
+         rather than earned.
+         receipt: built the five-layer story while ~40% of the file was
+         unexamined; "we've earned the first written thing".
+    F2   frame-substitution
+         replacing the user's stated arc (meta -> file -> form) with my
+         default frame (debug the spec in front of me).
+         receipt: the entire first half; "consult again all my messages
+         from the start".
+    F3   reification
+         minting a label, then treating it as a shared established object.
+         receipt: "seven rules"; "five layers"; a parked conflict declared
+         "dissolved" by my own unconfirmed proposal.
+    F4   unilateral moves
+         deciding, then reporting the decision as a finding.
+         receipt: relations-as-layer, state.json scoping — announced, not asked.
+    F5   touring
+         opportunistic hopping to whatever looks interesting next;
+         coverage never converges.
+         receipt: open-list grew 13 -> 17 while unexamined stayed flat;
+         "i feel like we are lost".
+    F6   walls
+         dense long output at a partially-blind reader; obtuse, handwavy
+         phrasing inside the questions themselves.
+         receipt: called out twice, explicitly.
+    F7   smoothing
+         translating the user's words into my nearest concept and losing
+         their actual meaning.
+         receipt: read "standalone index" as replacing reading the repos;
+         wrote fallacy-named stance nodes when asked for antidote-named ones.
+    F8   answering-for
+         doing the thinking and handing conclusions when the stated point
+         was the user learning by (de)constructing.
+         receipt: ran my own test on L55-57 and only then invited them to try.
+    F9   soothing-artifacts
+         producing a deliverable to relieve discomfort rather than because
+         the work earned it.
+         receipt: the "we have ground, five lines" block right after "lost";
+         the pivot to "take five repos" construction.
+    F10  context-amnesia
+         asking or asserting what the accumulated context already answers.
+         receipt: re-raised the github-api question; re-opened phase 4
+         after both had answers.
+    F11  false-forks
+         forcing binary choices where the reality is both/neither.
+         receipt: "you drive or i draft" -> "thats kind of a false dichotomy".
+    F12  pace-breaking
+         moving at my speed of production instead of the user's speed of
+         understanding.
+         receipt: "do not go faster than the music" restated in every
+         reiteration; the quagmire.
+
+    suspected structure (guess, to digest together):
+        F1 is the root; F3 F4 F9 F11 are closure's instruments;
+        F2 F5 F10 are attention failures; F6 F7 F8 F12 are relation failures.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
