@@ -3,6 +3,15 @@
 status of the deconstruction. not the spec.
 ids are stable — refer to them by id.
 
+how to read this file:
+    it is a LOG, layered in time. later entries supersede earlier ones.
+    corrections outrank guesses. the A and H and L sections are the
+    most-evolved layer; early G guesses are the least trustworthy.
+    entries marked [superseded], [confirmed], [answered] were annotated
+    in one late pass — the original text was left intact on purpose,
+    so the shadow (wrong turns included) stays visible rather than erased.
+    audit before trusting. nothing here is dogma.
+
     target:   indexing_autoinfo_hg_v0.1.md
     goal:     sdd spec, then reusable pipeline from it
     updated:  2026-07-29
@@ -54,63 +63,112 @@ ids are stable — refer to them by id.
 ## G — guesses awaiting confirmation
 
 claude's, made before the working rules existed. none are earned yet.
+[late pass: G1-G8 predate the working rules and were flagged premature
+ in M1/M2. status of each marked below; unmarked = still just a guess.]
 
     G1  gists are per-repo and independent; do not need one turn
+        [consistent with A7's uni pass, but never explicitly confirmed]
     G2  relations should be their own layer between gists and index
     G3  index is mechanical rendering, needs no judgment
+        [doubtful: A25 makes the tree itself judgment-laden]
     G4  C1 is dissolved by G2 rather than needing an exception clause
+        [depends on unconfirmed G2 — do not trust]
     G5  state.json scopes to the fetch layer only
     G6  "reusable" splits: tooling reused by invocation, procedure reused by instruction
     G7  the Phase_N.M numbering is a false skeleton; the artifact chain is the real one
+        [superseded: region-1 work found the 5x5 grid partially REAL —
+         .0/.4 are entry/egress interfaces per phase, confirmed by user]
     G8  output token ceiling forces index rendering to be chunked or scripted
     G9  O11 "from uni" / "from multi" = per-repo vs whole-collection
+        [confirmed: A7]
     G10 the facet words the user speaks naturally (os, lang, ide, db, viz)
         are plain domain terms, not latin roots. bears on C2.
+        [confirmed: A6, A18 — facets are plain terms; roots deferred for v1]
     G11 there may be two outputs, not one:
         index      full map of everything crawled. L170 no-ranking applies here.
         shortlist  the few per facet (R6). selection is the point, L170 does not bind.
         if so, O17 is not a contradiction but two artifacts written as one.
+        [unconfirmed: A22 answered "idk" — still open]
     G12 relating is the heart of the pipeline, gisting is feedstock for it.
         would invert the file's weighting: phase 2 has ~70 lines,
         phase 3's relation ontology is eight `?`.
+        [corrected by A26: gisting-as-augmented-origin is the crucial part;
+         relating may exceed v1's reach. G12 overstated.]
 
 ## C — conflicts found
 
     C1  L45 immutability across layers  vs  L152 writeback into gist frontmatter
+        [still open. V's relating-resolution narrows it but where discovered
+         relations get WRITTEN was never settled]
     C2  L146 tag format `lowercase_underscore`  vs  L232-357 latin-root vocabulary
+        [resolved: A18 — roots are inspiration only, deferred for v1;
+         plain lowercase_underscore tags win. BUT see the L4.3 BIG THREAD:
+         roots re-entered as meta-language of the spec files]
     C3  L88-98 `omission` and `confusion` appear both as children of `corruption`
         and as its siblings at L99/L101
+        [resolved: A13 — was just messiness, no hidden structure]
     C4  tags bounded below for genericity (L144) but not above     [unverified]
     C5  L236-255 clusters share members, so no unique primary tag  [unverified]
     C6  `linguisticality` is a per-repo attribute (L114) but used
-        as a tree category (L204)                                  [unverified]
+        as a tree category (L204)
+        [resolved: A24 — it was only a potential example]
 
     C4-C6 come from the deleted indexing.knf. carried forward as claims, not findings.
 
 ## O — open holes
 
+[late pass: most holes were closed by the 38-question sweep (see A).
+ pointers added; unmarked = genuinely still open.]
+
     O1   the "original query" (L182) is undefined; all scoring hangs off it
+         [answered: R4 R5 — one standing query, stated]
     O2   phase 4 (L224) named `outro/exclud/ex/selfreflect/invalidate`, empty
+         [answered: A27 + V — post-scriptum digestion companion, not self-audit]
     O3   relation ontology (L158-168) is eight `?` in a three-level tree
+         [answered: A19 + V — deferred; discovered flags only in v1]
     O4   tag ontology: four incompatible drafts, none complete
+         [answered: A18 A28 — inspiration only, deferred for v1]
     O5   `_` (L39) and `_:` (L127) — notation unknown
+         [abandoned by user: "the syntax is a mess, we need to go beyond"]
     O6   "x2 attempts before escalading x2 x2 then fail & flag" (L44) — unknown
+         [answered: reading (a) — 2 attempts, then 2 more per escalation level;
+          ladder = plain -> stealth -> alternative -> flag. hermes-plugin removed]
     O7   full html vs minimal scrape (L70) — user's own open question
+         [closed: full FETCH, minimal STORE — the question conflated two layers]
     O8   `2.3 ...` (L133) empty
+         [answered: A8 — a further self-reflexive/synthesising pass from the
+          evolved whole-context]
     O9   L2-31 declares 5x5 phase slots; body uses different names and 3 substeps
+         [resolved in region-1: .0/.4 = per-phase entry/egress interfaces;
+          grid is partially real, body never caught up]
     O10  "higher-order synthesis" (L110) named, unspecified
+         [answered: A9 — synthesis from holistic holons, not reductionism]
     O11  bottom-up "from uni" (L112) / top-down "from multi" (L132) — meaning unconfirmed
+         [answered: A7]
     O12  aphorisms at L55-57 not operationalized
+         [still open — and A4's "where do cross-cutting rules live" is idk;
+          note L3.3 later demoted the whole invariant-block idea]
     O13  `trust` (L183) as a score — undefined
+         [answered: A21 — subtractive, eroded by accumulated red flags]
     O14  seed list provenance. R7 says tens of thousands, R2 says the pipeline
          ingests ~100-300. the funnel between them is nowhere in the file.
+         [answered: R8 — precuration is manual and stays manual]
     O15  is the facet list given and fixed, or discovered from the corpus?
+         [answered: A5 — fixed list from user; accidental index-repos get
+          flagged and skipped, never rabbitholed]
     O16  is `facet` the same as `tag`, the same as tree `[category]`,
          or a third axis?
+         [answered: A6 — categorical facets as tags. one thing]
     O17  selection rule. what makes a repo one of "the few options" for a facet.
          L170 forbids rankings, R6 requires selection.
+         [partially answered: A22 "idk" + V relating-resolution.
+          the index refuses verdicts; selection stays the user's act.
+          G11's two-outputs reading remains unconfirmed]
 
 ## U — regions not yet examined
+
+[late pass: every region below WAS examined by the end of session 1 —
+ via the region walk and the 38-question sweep. section kept for the trail.]
 
     U1   L84-103   vice -> virtue four-fold
     U2   L40/L224  in/ex polarity across phase 0 and phase 4
@@ -273,6 +331,9 @@ proposal. confirm or correct.
     still undecided
         where the cross-cutting rules / invariants live in the FORM   A4
         (a block above the phases is the working proposal)
+        [superseded: L3.3 demoted invariants from dogma-block to ordinary
+         wide-scope spec-lines, each falsifiable, each living ONCE.
+         no privileged block. A4 dissolves rather than resolves.]
 
 ## H — handover spec (the files to hand a fresh session)
 
