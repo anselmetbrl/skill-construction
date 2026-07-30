@@ -317,6 +317,30 @@ session 2. specing the complement to the user's own two files
         L2.4  both epistemology AND protocol, but DECOUPLED modularly.
               two modules, joined not merged, not fragmented either.
 
+    L3 — the spec file's form — ANSWERED, and it reshaped spec.md
+        L3.1  holistic > rigid linear schema. do NOT lock an ordering
+              prematurely — the best schema is itself unknown, questionable.
+        L3.2  KEY IDEA. spec.md is a TREE with gradual disclosure (fold).
+              each spec line can carry sublines:
+                  why
+                  falsification — when does this decision become mistaken,
+                                  and what nuance recontextualises it then
+              every decision carries how it could be wrong.
+        L3.3  "invariants can become reductive fantasy."
+              the invariants claude listed are WEAK/FLAWED — do not reify them.
+              nothing is unquestionable dogma; an "invariant" is just a
+              wide-scope spec-line, still falsifiable per L3.2.
+              modularity forbids duplicating a signal into each layer (bloat):
+              each signal lives ONCE.
+        L3.4  do not assume the buildable/imperative form is already known.
+              stay intent-level; don't block holistic intelligence for
+              reductive production. concretes deferred to the build session.
+
+        => spec.md = an affirmative claim-tree. each node folds into
+           why + falsification. non-dogmatic, non-duplicative, intent-level.
+        => same shape may fit CLAUDE.md (claim+shadow == claim+falsification).
+           possible convergence — do NOT force it. flagged for L4.
+
 ## M — meta, on how this session has gone
 
     M1  claude settled on a tidy five-layer story while ~40% of the file
