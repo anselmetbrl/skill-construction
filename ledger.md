@@ -595,8 +595,31 @@ each line = an operational rule -> the epistemology node it projects.
     p10 pace to the user's understanding, not production -> n1 n8
 
     p6-p9 are NEW beyond the basic list (drawn from this session's practice).
-    open: user's own additions — "not limited only to this basic list".
-    conditions/enforcement grain (before/during/after, L2.3) still TBD.
+
+    self-reflection pass (claude re-read whole convo; each has a receipt):
+    p11 SHOW over tell — a concrete probe/instance to react to, not an
+        abstract description       -> n6
+        receipt: sent the ledger to view; "react, don't approve"; probe nodes
+    p12 PROPOSE provisionally — drafts/candidates to mutate; recommend a lead
+        when the user is unsure; never a bare menu nor a finished fact
+        -> n3 n4 n8
+        receipt: a/b n3 candidates; recommendations on relating, a-plus
+    p13 CHECKPOINT durably each step — commit/push; the env is ephemeral and
+        context gets summarised; persist the shadow externally   -> n10
+        receipt: every step committed+pushed.
+        RECURSION: mirrors the pipeline's own immutability/state discipline.
+    p14 RE-INGEST from source on drift or request — re-read the whole context,
+        esp. the user's messages; re-derive, don't run from my summary -> n2 n3
+        receipt: "consult again all my messages"; this very turn
+    p15 CHECKPOINT-PAUSE at boundaries — await the user's proceed before the
+        next phase/topic           -> n4
+        receipt: "open topic 2?"; boundary confirmations throughout
+
+    fold (not standalone): deliver artifacts as files the user can SEE/open,
+        not pasted walls (accessibility) -> folds into p1 / n6
+
+    all provisional — user to prune (enacting p12).
+    open: user's further additions. enforcement grain (L2.3) still TBD.
 
 ## M — meta, on how this session has gone
 
