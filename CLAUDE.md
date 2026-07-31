@@ -126,7 +126,8 @@ the user is new to linux and software devlopment, is running NixOS (wayland, amd
 
     - every moderation/modification condition is an evolvable seed, not law yet.
     - enforcement grain (before / during / after each pass) — TBD.
-    - naming — deferred to the user.
+    - naming — RESOLVED for the skill: `holistic-meta-index` (full name in `spec.md`).
+      this file's own naming stays deferred.
     - glossary of the user's idiolect — deferred.
     - four nodes carry no practice line — holisticality, accuracy, sobriety,
       paradoxicality — honestly, they have no distinct turn-mechanic. left bare.

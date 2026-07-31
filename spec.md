@@ -175,8 +175,16 @@
                   discrimination is a property of the SET, not of the repo
     format        lowercase_underscore                                        (v0.1 L146)
     empty         `#void` — never force a tag                                       (A17)
-    vocabulary    the user's latin-root vocabulary is INSPIRATION, not a whitelist ·
-                  guard against deriving synonyms instead of distinct high-signal tags (A15 A18)
+    vocabulary    the user's latin-root vocabulary is a GENERATOR, not a whitelist:
+                    as a CLOSED LIST to conform to   deferred — breeds synonym-slop  (A18)
+                    as a GRAMMAR  prefix · ROOT · suffix   LIVE — it tells you what a
+                                  good tag LOOKS LIKE: an ACT-noun (`-ation`) that
+                                  PARTITIONS, not a category-label that saturates.
+                                  an act divides the collection; a label absorbs it.
+                                  the full grammar lives in `vocabulary.md`
+                  guard         never pick a tag BECAUSE it is in the vocabulary — pick
+                                what partitions. the grammar shapes the FORM, it never
+                                supplies the list                                   (A15)
     moderation    [evolve] 4 cannot carry a repo, or 12 cannot carry the collection
     modification  [evolve] surface the pressure to the user — the cap is a signal-discipline,
                   not a law to conform to at the cost of meaning
@@ -262,7 +270,8 @@
 
     in v1         everything in section 1 above
     deferred      a designed relation ontology                                      (A19)
-                  the root-vocabulary as a tag WHITELIST                            (A18)
+                  the root-vocabulary as a tag WHITELIST — the closed-list half only;
+                  as a grammar it is live, see `tag.vocabulary`                     (A18)
                   memory across runs — each run stands alone                   (A30 A31)
                   staleness and refresh                                             (A32)
                   persisted contradiction-resolutions — these live in the user's pkm (A33)
@@ -281,8 +290,8 @@
     - `[open]` self-audit vs the stance file's pre-ship gate — one or two.
     - `[open]` enforcement grain: before / during / after each pass. during might be irrealistic for how an agentic llm workds, micro self-reflection after each pass (macro before and after each phase) is crucial  for per-pass self-evaluation and self-healing debug git try-again resolution             (L2.3)
     - `[open]` a glossary of the user's idiolect — deferred.
-    - `[open]` BIG THREAD: the latin-root vocabulary is deferred as TAGS, yet it keeps
-      re-entering as the META-language (moderation/modification here; the tags that
-      "pass" in `tag.quality`). alive as language while dead as taxonomy — unresolved.
+    - `[resolved]` BIG THREAD — the latin-root vocabulary was never in contradiction:
+      it is deferred as a TAXONOMY (a closed list) and live as a LANGUAGE (a generator).
+      the distinction now lives in `tag.vocabulary`. the deferral survives intact.
     - do not settle for this file as a summary: re-ingest the conversation and the
       six source files holistically.

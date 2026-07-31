@@ -795,3 +795,30 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
         tell: grand words (altitudes/trinity/immune) appended for closure-cadence;
         the immune one had NO referent, the rest were dressed-up not hollow.
         fix = the pre-ship gate (proposed for CLAUDE.md as meta-self-audit).
+        [written into CLAUDE.md root as its `practice` line — self-humility's
+         operational form. folded there rather than given its own node (live-once).]
+
+    S2.16 BIG THREAD CLOSED — taxonomy vs language (resolves the L4.3 big-thread)
+        the latin-root vocabulary was never in contradiction with A18. two roles:
+          as a TAXONOMY   a closed list to pick/conform to   DEFERRED (A18 holds)
+                          -> forces conformity, breeds synonym-slop
+          as a LANGUAGE   the grammar prefix · ROOT · suffix  LIVE, already in use
+                          -> the spec's own meta-language (moderation/modification/
+                             invalidation/verification are the user's roots)
+                          -> tag FORM: an ACT-noun (-ation) PARTITIONS the collection;
+                             a category-label (ai, memory, local) saturates it.
+                             this is WHY the roots produce good tags (S2.11).
+        guard: never pick a tag BECAUSE it is in the vocabulary — pick what partitions.
+        the grammar shapes the FORM, never supplies the list.               (A15)
+        vocabulary.md's own reframe already said this; it was never carried into the spec.
+        written into spec.md `tag.vocabulary`.
+
+    S2.17 naming RESOLVED (closes A38)
+        full name  holistic-meta-indexing_of_multi-project-research_as_dataset-graph
+                   _for_human-attention
+        grammar    four modules — ACT · OBJECT · FORM · PURPOSE
+                   `-` binds a compound · `_` marks a module boundary
+        handle     holistic-meta-index  (invocation)
+        user's own coinage; "holistical" -> "holistic" at the user's call.
+        note: `as_dataset-graph` names the COMPILED MODEL, not the rendered file —
+        consistent with S2.12 (the flat index is one rendering of a graph-shaped set).
