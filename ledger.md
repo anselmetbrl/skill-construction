@@ -928,3 +928,71 @@ this layer records what the BUILD settled, measured, or recovered.
            skill, portable. SKILL.md points at it and does not restate it.
         live-once holds within the skill's own boundary, which is the boundary
         that travels.
+
+## S4 — the root recontextualisation (provisional — the user leans, does not rule)
+
+    S4.1 the test run happened (another session, branch claude/holistic-meta-index-ffge4u,
+         25 real repos). its INDEX.md + EMERGE.md audited here against spec.md.
+         held       fetch ladder degraded honestly and recorded its rung · dossiers
+                    frozen · WFGY's substance #void'd, not fabricated · hype/unfree
+                    flags quote-grounded · flat list, tag-line, pause, git checkpoints
+         collapsed  relate: 25/25 #graph slots FILLED, 2 real edges, 4 relation-types
+                    coined, "share-tag, no edge" written INTO the slot it fills ·
+                    display≠comparison broken 4x, twice while announcing compliance ·
+                    index not standalone (3 pointers out to tags.md) · emerge narrates
+                    the USER, evidence-free · 3 of 12 tags hold exactly one repo
+         measured   75 gist claim-lines · 18 with any quote · 0 with quote+link ·
+                    21/25 why-lines quoteless. (found by grep, not by judgment.)
+         gate       ran at every phase. passed every time. spec §2's own moderation
+                    seed — "the check becomes a ritual that always passes" — fired.
+
+    S4.2 the root, in the user's words  [provisional: "i dont really know, but this
+         seems to be the profoundly recontextualizing taboo root cancer"]
+            "this pipeline asks an LLM for judgments it structurally cannot make,
+             then asks it to police itself on exactly those judgments."
+
+    S4.3 the receipt is already in the project's own files
+         the spec guards gisting DOWNWARD: "the agent reads and writes gists ITSELF —
+         beware agentic exportation of responsibility" (no sub-LLM delegation).
+         the same exportation runs UPWARD, unguarded: USER → agent.
+         phases 5-8 batch-export the user's sensemaking — what partitions, what is
+         relevant, what emerged, what is good — to the agent. CLAUDE.md meta-sovereignty:
+         "sensemaking happens within the user, not around them."
+         => the collision was between the user's own two files all along:
+            spec.md automates exactly what CLAUDE.md rules must be interactive.
+
+    S4.4 the capability line, made concrete  [claude's formulation — a guess]
+         span-level  resolvable to a span in frozen material: transcription, quote+link
+                     selection, counting, pattern-flags (superlatives, license strings),
+                     arranging, rendering. checkable by grep or by the user cheaply.
+                     the run's SUCCESSES were all span-level.
+         set-level   properties of the whole collection, no span resolves them:
+                     tag-partition · relevance-order · emergence · quality-of-output.
+                     uncheckable by their producer.
+                     the run's FAILURES were all set-level.
+         the chain splits on that line: phases 1-3 span · phases 5,7-8 set ·
+         phase 6 reducible to span (harvest quotes, resolve names) · phase 4 straddles.
+
+    S4.5 the paradox, held open — the user rules, not claude
+         orientation/position — the index's PURPOSE (R9 R10) — is itself set-level.
+         the value was specified to live exactly where the cancer lives.
+         and re-inserting the user into set-level judgment spends the very attention
+         the pipeline exists to protect. seeds, none chosen:
+           (a) shrink v1 to the span-level machine — access without position;
+               position stays the user's own act, over better-arranged evidence
+           (b) set-level survives only as PROPOSALS — exhibits + marked guesses,
+               judged by the user at checkpoints; batch becomes interactive
+           (c) split the run: span-level batches alone; set-level is CO-CONSTRUCTED
+               in a short session over the compiled evidence — the pipeline emits a
+               workbench, the index is co-produced. (the stance, applied to the
+               pipeline itself.)
+         also live: which phases should exist at all — A26 foresaw this
+         ("relating might be too much to ask").
+
+    S4.6 the gate, recontextualised
+         self-policing set-level judgments is the same cancer, recursed.
+         what actually caught defects this cycle: grep (mechanical) and the user
+         reading a sample THEY picked — precisely spec §2's modification seed.
+         => a reformed gate has no self-judgment of quality: machine-checkable
+            properties + user sample-audit. nothing else.
+         caveat: S4 itself is LLM output. audit before trusting.
