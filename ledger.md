@@ -996,3 +996,72 @@ this layer records what the BUILD settled, measured, or recovered.
          => a reformed gate has no self-judgment of quality: machine-checkable
             properties + user sample-audit. nothing else.
          caveat: S4 itself is LLM output. audit before trusting.
+
+## S5 — the resolution: the skill re-solved around the span/set line
+
+the user's directive: "resolve the skill holistically." enacted as follows —
+claude's synthesis, marked provisional, reversible under git.
+
+    S5.1 the trinity resolved AS a trinity, not a pick (n11 — resolving through
+         trinity over dissolving through duality):
+           (a) governs the BATCH    phases 1-4 are span-level ONLY
+           (b) governs CONTENT      set-level exists only as [proposal], grounded
+           (c) governs PROCESS      proposals are RULED at a co-construction
+                                    session; the index is co-produced
+         the three seeds of S4.5 were never alternatives — they were the three
+         faces of one instrument.
+
+    S5.2 the attention-paradox, resolved by relocating the value:
+         the batch compresses the JUDGMENT SURFACE — hours of raw repos become
+         minutes of grounded exhibits. position is not delivered by the agent;
+         it emerges in the user at the session; INDEX RECORDS the position taken.
+         R9 ("orientation and access, not substitution") is fulfilled MORE
+         honestly than the original chain, which substituted in the substance
+         while complying in the frame.
+         cost, stated plainly: session time grows with collection size. at 300
+         repos the session is real work. that is the price of sovereignty, and
+         still orders cheaper than the raw reading.
+
+    S5.3 the new chain (7 phases, 3 modes):
+           batch    1 seeds · 2 fetch (+pause) · 3 gist-as-SELECTION (+harvest) ·
+                    4 workbench (exhibits E1-E7 + checks C1-C8)
+           session  5 rulings — tags · edges · order · emerge-candidates, the
+                    user rules; rulings.md verbatim, append-only, resume-state
+           render   6 mechanical compile (INDEX from rulings+gists · EMERGE from
+                    ACCEPTED observations only) · 7 user-picked sample-audit
+         absorbed: old multi-pass → mechanical whole-view (E1) + session; old
+         tag/relate/index/emerge batch-authoring → proposals + rulings.
+         a fourth layer added between inferred and rendered: RULED (the user's,
+         outranks all inferred).
+
+    S5.4 the gate reformed (closes S4.6):
+         checks C1-C8 — every one a COUNT with a definite answer, output shown
+         as an exhibit (E6), never self-graded. C1 exists because of 0/75.
+         C4 names the subtle one: a count in prose is a comparison even when
+         denying one. quality judgment happens exactly once, and it is the
+         user's sample-audit — the sample THEIRS to pick.
+         the four prose-tests (concrete-referent · live-once · provenance ·
+         cadence-suspicion) stay in CLAUDE.md, governing conversation — they
+         were never artifact-checks and pretending they were was the ritual.
+
+    S5.5 files:
+         SKILL.md rewritten around §0 span-vs-set · references/ now complete:
+         checks · fetch (measured routes carried from the test branch — marked
+         re-measure-elsewhere) · gist (the format forces grounding) · workbench ·
+         session · render. the skill carries its own seeds (§5) and runs without
+         its home repo — portability closed.
+         spec.md annotated in place with [S4] on root · gist · tag · relate ·
+         index · emerge · self-check + openended. nothing deleted.
+
+    S5.6 the test branch (claude/holistic-meta-index-ffge4u):
+         its references/ were written mid-run from the pre-S4 understanding —
+         SUPERSEDED by this rebuild, not merged. carried forward: fetch.md's
+         measured route table (span-level, and it held in the run). its run tree
+         stays untouched as the EVIDENCE of S4.1.
+
+    S5.7 unproven, said plainly:
+         the whole resolution has never run. the session mode especially has
+         never been exercised — it structurally CANNOT be tested by an agent
+         alone, which is by design. next falsification: a small real run
+         (the user's seeds, ~5-10) through phases 1-4, then a live session
+         with the user. S5 is LLM output; audit before trusting.

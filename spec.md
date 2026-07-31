@@ -35,6 +35,9 @@
     moderation    [evolve] an index so thin it gives no orientation at all
     modification  [evolve] deepen the gist; never let it stand IN FOR the repo
     governs       all nodes below
+    [S4]          sharpened by the test run: position is not delivered BY the agent —
+                  it emerges IN the user, at a co-construction session; the index
+                  RECORDS the position taken. see ledger S4-S5.
 
 ---
 
@@ -160,6 +163,9 @@
     modification  [evolve] say so plainly — a thin repo is a finding, not a failure to hide
     links         the-agent-does-the-reading · evidence-over-verdict ·
                   void-over-hallucination · capture-over-judge
+    [S4]          "augment" invited authorship: the test run grounded 0 of 75 claim-lines.
+                  gisting is now SELECTION — every line `claim ← "span" (link)` or #void;
+                  the format forces the grounding, and a count (C1) checks it.
 
 ### tag — few, distinctive, derived from the whole
     in            all gists                         out    4 per repo · ≤12 across the collection
@@ -189,6 +195,9 @@
     modification  [evolve] surface the pressure to the user — the cap is a signal-discipline,
                   not a law to conform to at the cost of meaning
     links         signal-over-saturation · void-over-hallucination
+    [S4]          what-partitions-the-set is set-level judgment — not the agent's to make.
+                  the agent derives GROUNDED candidates; the ≤12 and each repo's 4 are
+                  RULED by the user at the session. see ledger S4.4.
 
 ### relate — cross-repo edges, only where evidence shows them
     in            all gists read together (the multi pass)   out   a decoupled `#graph` module
@@ -204,6 +213,10 @@
     modification  [evolve] widen the vocabulary WITH the user; the agent never coins
                   relation-types alone                                              (A19)
     links         evidence-over-verdict · what-can-be-rewritten · index
+    [S4]          the test run confirmed A26's fear: 25/25 slots filled, 2 real edges,
+                  4 types coined. now: the agent HARVESTS quotes and name-resolves
+                  mechanically; every edge is RULED by the user. #void is the common
+                  outcome and renders as exactly that.
 
 ### index — one flat list, unfolding per repo
     out           ONE artifact — the index IS the shortlist; no second leaderboard  (S2.8)
@@ -234,6 +247,9 @@
                   the layout is free
     links         orientation-not-substitution · signal-over-saturation ·
                   what-can-be-rewritten · failures-stay-visible
+    [S4]          relevance-to-query is set-level: the order is now RULED by the user
+                  (default: their own seed order — pre-curation IS their relevance
+                  signal). counts in prose = a comparison even when denying one (C4).
 
 ### emerge — a spoken companion that helps digest the index
     out           a post-scriptum beside the index. NOT a second index, NOT a self-audit (A27)
@@ -249,6 +265,9 @@
     modification  [evolve] say the little there is, and stop
     links         signal-over-saturation · void-over-hallucination ·
                   orientation-not-substitution
+    [S4]          "what emerged" is set-level. the test run's emerge narrated the USER,
+                  evidence-free. now: the agent offers grounded CANDIDATES; only what
+                  the user ACCEPTS gets spoken (C8). none accepted is a valid EMERGE.
 
 ---
 
@@ -275,6 +294,11 @@
     moderation    [evolve] the check becomes a ritual that always passes
     modification  [evolve] audit against a SAMPLE the user picks, not one the agent picks
     links         checkpoint-and-resume · failures-stay-visible · signal-over-saturation
+    [S4]          the moderation seed FIRED: the gate passed every phase of the test run
+                  while the artifacts collapsed. self-judgment of artifact quality is
+                  retired — the gate is now countable checks (C1-C8, shown as exhibits)
+                  + the user's sample-audit, exactly this node's own modification.
+                  the four prose-tests remain the stance's, for conversation.
 
 ---
 
@@ -306,5 +330,12 @@
     - `[resolved]` BIG THREAD — the latin-root vocabulary was never in contradiction:
       it is deferred as a TAXONOMY (a closed list) and live as a LANGUAGE (a generator).
       the distinction now lives in `tag.vocabulary`. the deferral survives intact.
+    - `[S4]` — the first real run recontextualised this spec at the root: an LLM
+      cannot make the SET-LEVEL judgments (partition · relevance · emergence ·
+      quality) several nodes quietly assumed, nor police itself on them. the nodes
+      above carry [S4] annotations in place; the full trace is ledger S4-S5; the
+      executable resolution is the skill (batch span-level → session where the
+      user rules → mechanical render). this file stays the WHAT; it was not
+      rewritten — annotated, shadow visible.
     - do not settle for this file as a summary: re-ingest the conversation and the
       six source files holistically.
