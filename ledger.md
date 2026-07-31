@@ -740,6 +740,8 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
               the multi-render itself is DEFERRED, not blocked.
               n11: "one layout now + architecture that keeps more cheap", not
               "all layouts" vs "one hard-wired layout".
+              [S2-audit: "layout-as-projection" reads plainer as
+               "layout re-renders the same material, never reprocesses".]
 
     relations · egress · falsification (S2 cont.)
         S2.13 #graph relation-types — evidence-gated, minimal-fixed (refines A19):
@@ -773,3 +775,23 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
                     for its own sake; adapt the shape if a node genuinely demands.
                   - one atomic line each; evolvable, not final law.
                 for llm-agent generation the falsification IS the immune system.
+                [S2-audit: SLOP — struck. same hollow "X IS the immune-system"
+                 cadence as the cut "flawed-agentism-as-immune-system", and
+                 redundant with the concrete gate above. kept visible as shadow.]
+
+    S2-audit — the self-audit gate re-run over my own recent output
+        the generator that produced "flawed-agentism-as-immune-system" left
+        siblings. found + marked (shadow kept, nothing deleted):
+          CUT     S2.15 immune-system line — hollow, redundant. struck above.
+          RENAME  ornamental word, real referent — plain form for the spec write:
+                    "altitudes" (S2.1, S2.3) -> "layers / levels of fixity"
+                    "trinity"   (S2.5)        -> "the three faces (git/gist/graph)"
+                    "layout-as-projection"    -> "re-renders, never reprocesses"
+          KEEP    grounded labels for real practices (not slogans):
+                    orientation-not-substitution · capture-over-judge ·
+                    evidence-over-verdict · void-over-hallucination ·
+                    display!=comparison · origin-truth · spine-fixed/leaves-earned ·
+                    non-redundancy · evidence-gated
+        tell: grand words (altitudes/trinity/immune) appended for closure-cadence;
+        the immune one had NO referent, the rest were dressed-up not hollow.
+        fix = the pre-ship gate (proposed for CLAUDE.md as meta-self-audit).
