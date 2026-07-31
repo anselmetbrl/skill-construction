@@ -8,3 +8,6 @@ leaves       thin — a versioned self-ecosystem (5.0 Polaris · 4.0 "governance
 flags        seo/ai-filler — the README opens literally as an "AI ROUTING NOTE (Homepage)... Primary homepage priority... flagship public route" · marketing-hype — "fastest practical gate" repeated. from the README a reader CANNOT tell what the code does.
 trust        eroded — the artifact reads as routing/positioning text, not a project description; the void in what/why/how is the finding, stated plainly (not hidden)
 #graph       a self-referential ecosystem index (its OWN versions), NOT an awesome-list of others → stays IN the index, flagged, never skipped · claims LLM-reasoning/RAG/agent domain (dspy 21, baml 22, letta 08) — no evidenced edge
+
+## position (multi-pass)
+C? · research? · LO? (filler-flagged). cannot be positioned on substance — positioned only by its OWN claims; low-confidence.

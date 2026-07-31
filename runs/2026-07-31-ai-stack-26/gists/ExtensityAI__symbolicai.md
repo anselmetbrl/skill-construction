@@ -8,3 +8,6 @@ leaves       Python operators overloaded, opt-in semantics for speed/safety · "
 flags        none
 trust        whole
 #graph       neurosymbolic cluster: hyperon (06), deep_causality (16), atomspace (19) · typed-correctness-over-LLMs theme: baml (22), dspy (21) — share-tag, not an evidenced edge
+
+## position (multi-pass)
+C1∩C2 · research/agent · HIGH. the HINGE between llm-programming and neurosymbolic.

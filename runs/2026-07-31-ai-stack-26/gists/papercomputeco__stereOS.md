@@ -8,3 +8,6 @@ leaves       "mixtapes that bundle a hardened, minimal Linux system with specifi
 flags        none
 trust        whole
 #graph       AI-agent infra theme: obscura (07), screenpipe (25), letta-code (09) · Nix cluster: devenv, den, vpsadminos, yo
+
+## position (multi-pass)
+C4∩C5 · os/agent · MED-HI. the BRIDGE node — a Nix OS built FOR agents; joins agent-infra to the nix-stack.

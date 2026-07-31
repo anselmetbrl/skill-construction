@@ -8,3 +8,6 @@ leaves       unprivileged system containers · ZFS-backed · runit + LXC · in r
 flags        none
 trust        whole
 #graph       "based on NixOS and not-os" (dep-fact) · Nix cluster: devenv (01), den (12), stereOS (11), yo (15)
+
+## position (multi-pass)
+C5 nix-stack · os · LO. the infra-OS end of the Nix axis (production hosting, not AI).

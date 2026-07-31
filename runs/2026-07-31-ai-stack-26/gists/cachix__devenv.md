@@ -8,3 +8,6 @@ leaves       "50+ languages with built in tooling" · "40+ services like Postgre
 flags        none — feature-forward but claims are enumerable/verifiable
 trust        whole
 #graph       built ON Nix (dep-fact) · den (12) is a DIFFERENT Nix layer (config composition, not dev shells)
+
+## position (multi-pass)
+C5 nix-stack · env · MED. the mature dev-shell node; sibling den (config layer). infra-enabling to the AI query, not core-AI.

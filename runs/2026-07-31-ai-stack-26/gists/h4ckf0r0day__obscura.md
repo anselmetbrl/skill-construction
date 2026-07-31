@@ -8,3 +8,6 @@ leaves       built-in anti-detect · self-reported low memory/startup vs Chrome 
 flags        marketing-hype — self-benchmark table with bolded wins; "Obscura Cloud" hosted-version waitlist; sponsor "7M+ residential IPs"; "10,000 stars and what's next" banner
 trust        slightly eroded — the capability claims are plausible but SELF-measured and wrapped in a sales register; user weighs
 #graph       "drop-in replacement for headless Chrome / Puppeteer / Playwright" → alternative-to (NOT in collection) · AI-agent tooling theme: stereOS (11), screenpipe (25)
+
+## position (multi-pass)
+C4 agent-infra · MED-HI (hype-discounted). the agent's web-hands; neighbors stereOS, screenpipe (agent substrate).

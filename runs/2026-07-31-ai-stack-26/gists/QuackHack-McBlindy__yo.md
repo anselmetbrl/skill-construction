@@ -8,3 +8,6 @@ leaves       "translating plain-language commands into system shell actions" · 
 flags        none
 trust        whole
 #graph       DISTINCTIVE anti-LLM stance — "yo is NOT: an LLM with shell access!" — a philosophical contrast to the LLM-agent shells kash (13) and intelli-shell (05, AI mode) · Nix+Rust cluster
+
+## position (multi-pass)
+C5∩C6 · agent/voice · MED. the deliberate ANTI-LLM counterpoint — the collection's philosophical foil to the LLM-agent cluster.

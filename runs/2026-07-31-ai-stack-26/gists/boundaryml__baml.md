@@ -8,3 +8,6 @@ leaves       "no any nor casting" · built-in tests/eval framework · a stdlib f
 flags        none — the Rust/Go comparisons are stylistic analogies, not competitor claims
 trust        whole
 #graph       LLM/agent-programming cluster: dspy (21), symbolicai (18) — share-tag, not an evidenced edge
+
+## position (multi-pass)
+C1 llm-programming · lang/agent · HIGH. the language pole; neighbors dspy (framework) and symbolicai.

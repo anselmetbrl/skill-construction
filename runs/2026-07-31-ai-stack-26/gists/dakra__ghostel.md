@@ -8,3 +8,6 @@ leaves       Kitty keyboard + graphics protocols · true color · synchronized o
 flags        none
 trust        whole
 #graph       harvested: README "how it compares to vterm or eat" → alternative-to vterm, eat (emacs terminals; NOT in collection → drops)
+
+## position (multi-pass)
+C9 · ide/terminal · LO. editor-tooling singleton; relevance is workflow, not AI.

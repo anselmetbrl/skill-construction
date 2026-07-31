@@ -8,3 +8,6 @@ leaves       memory scanning/editing · debugger · modding environment · a lar
 flags        none — the README is terse and links-heavy; the substance is domain-known rather than README-stated (a mild capture-gap, not a fault)
 trust        whole
 #graph       THEMATIC OUTLIER of this collection — reverse-engineering / memory-editing, unrelated to the AI / agent / nix / knowledge clusters; a partition-of-one
+
+## position (multi-pass)
+OUTLIER · LO. the partition-of-one; present by the user's curation, not by cluster kinship.

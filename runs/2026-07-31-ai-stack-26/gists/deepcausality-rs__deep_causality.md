@@ -8,3 +8,6 @@ leaves       dynamic/adaptive/emergent causality as first-class modalities · "g
 flags        strong-claims — the relativistic/quantum framing reads bold, but is anchored to a stated axiomatic system and LF backing; recorded, not condemned
 trust        whole — claims are framework-internal, not sales superlatives
 #graph       contrasts Pearl SCM / Granger / DBNs (NOT in collection) · causal + neurosymbolic theme: symbolicai (18), hyperon (06)
+
+## position (multi-pass)
+C2 neurosymbolic · research · HIGH. the causal-reasoning pole; most theory-forward of the set.

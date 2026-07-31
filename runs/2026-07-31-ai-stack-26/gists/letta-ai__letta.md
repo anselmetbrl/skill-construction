@@ -8,3 +8,6 @@ leaves       memory that self-improves · model-agnostic (recommends latest Anth
 flags        maturity (self-stated, honest): "This repository contains the legacy Letta server... Active development has moved to the Letta Agent repo [letta-code]"
 trust        whole — the legacy status is disclosed plainly, not hidden
 #graph       "development has moved to letta-code" → superseded-by letta-ai/letta-code (09) ✓ IN-COLLECTION · lineage "formerly MemGPT"
+
+## position (multi-pass)
+C3 agent-memory · HIGH but LEGACY — read letta-code first; kept for lineage (ex-MemGPT).

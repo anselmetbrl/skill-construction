@@ -8,3 +8,6 @@ leaves       "a successor to the OpenCog Classic Atomese language" · meta-langu
 flags        none — self-described "pre-alpha" is honest maturity
 trust        whole
 #graph       "successor to the OpenCog Classic Atomese language" → alternative-to / succeeds opencog/atomspace (19) ✓ IN-COLLECTION · neurosymbolic cluster: symbolicai (18), deep_causality (16)
+
+## position (multi-pass)
+C2 neurosymbolic/AGI · HIGH. anchors the AGI-language axis together with atomspace (its predecessor).

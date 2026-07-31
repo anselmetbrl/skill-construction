@@ -8,3 +8,6 @@ leaves       "Near-native, garbage-collection-free and memory-safe real-time aud
 flags        none
 trust        whole
 #graph       harvested: "instead of mapping it to existing audio lib like SuperCollider, I decide to do it the hard way" → alternative-to SuperCollider (NOT in collection → drops at resolve)
+
+## position (multi-pass)
+C8 · lang/audio · LO. creative-coding sibling of bevy (Rust, non-AI); niche within the AI-stack query.

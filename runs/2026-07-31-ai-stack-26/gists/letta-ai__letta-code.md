@@ -8,3 +8,6 @@ leaves       skill-learning · `/sleeptime` periodic dreaming · `/palace` memor
 flags        none — feature-rich, but the features are enumerable and concrete
 trust        whole
 #graph       active successor of letta (08) ✓ IN-COLLECTION · agent-harness-with-skills shape parallels skill-construction (17), the very harness this run executes in (thematic)
+
+## position (multi-pass)
+C3 agent-harness · HIGH. the live node; the collection's closest mirror of this run's OWN harness (skills+subagents+hooks).

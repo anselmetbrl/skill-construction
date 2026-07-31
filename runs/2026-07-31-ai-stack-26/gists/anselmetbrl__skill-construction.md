@@ -8,3 +8,6 @@ leaves       CLAUDE.md (the working stance) · spec.md (the pipeline) · ledger.
 flags        none — GitHub metadata is `#void` (0 stars, no description): a fresh working repo, a finding not a fault
 trust        whole
 #graph       SELF-REFERENTIAL — this repo produced the pipeline running now · agent-skill theme: letta-code (09) — thematic only, no evidenced edge
+
+## position (multi-pass)
+C3/meta · agent · MED. the self-referential root — the repo that authored this very pipeline.

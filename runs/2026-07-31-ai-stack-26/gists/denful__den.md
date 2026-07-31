@@ -8,3 +8,6 @@ leaves       "Write a feature once. Run it on every host, user, and platform" ·
 flags        none
 trust        whole
 #graph       Nix cluster — a DIFFERENT layer from devenv (01): den = config composition, devenv = dev shells · vpsadminos (10), stereOS (11), yo (15)
+
+## position (multi-pass)
+C5 nix-stack · env/config · MED-LO. the config-composition layer; an abstract sibling of devenv (dev shells).

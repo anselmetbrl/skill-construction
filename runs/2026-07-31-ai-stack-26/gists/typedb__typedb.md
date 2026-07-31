@@ -8,3 +8,6 @@ leaves       polymorphic queries · conceptual data modeling · type safety "at 
 flags        marketing-hype — "next-gen", "groundbreaking query language", "we've reinvented the database for the modern programming era"
 trust        slightly eroded — the typed model is substantive; the register oversells it; user weighs
 #graph       knowledge/graph-data theme: atomspace (19) hypergraph DB — share-tag, not an evidenced edge
+
+## position (multi-pass)
+C7 knowledge-db · db · MED (hype-discounted). the typed-DB pole of the knowledge-db pair with atomspace.

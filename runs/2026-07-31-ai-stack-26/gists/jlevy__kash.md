@@ -8,3 +8,6 @@ leaves       operates on "items" (URLs, files, Markdown) in a workspace · "serv
 flags        none — "It's new and still has some rough edges" is honest
 trust        whole — 25 stars is a small/early project: a finding stated plainly, not a fault
 #graph       shell+AI cluster: intelli-shell (05), yo (15) · MCP tooling theme
+
+## position (multi-pass)
+C3∩C6 · agent/shell · MED. an AI-shell bridging agent-memory to shells; MCP-native.

@@ -8,3 +8,6 @@ leaves       design goals: Capable (full 2D+3D) · Simple · Data-Focused · Mod
 flags        none — the README's "still in the early stages... breaking changes every ~3 months" is HONEST maturity disclosure, the opposite of hype
 trust        whole
 #graph       no evidenced in-collection edge (ECS game engine; a partition-of-one on domain)
+
+## position (multi-pass)
+C8 · lang/engine · LO. domain-isolated game engine; relevant as a Rust-ecosystem exemplar, not for AI. neighbor glicol (creative Rust).

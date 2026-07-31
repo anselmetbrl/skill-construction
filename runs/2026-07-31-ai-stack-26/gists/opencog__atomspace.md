@@ -8,3 +8,6 @@ leaves       "a metagraph store is literally just-plain better than a graph stor
 flags        none — the "better than a graph store" claim offers a PDF, so it reads as an argued position, not a bare superlative
 trust        whole
 #graph       OpenCog Classic KR store; hyperon (06) self-describes as "successor to the OpenCog Classic Atomese language" → succeeded-by hyperon ✓ IN-COLLECTION · graph-data theme: typedb (14)
+
+## position (multi-pass)
+C2∩C7 · db/research · HIGH. the mature KR substrate; hyperon's predecessor, typedb's AGI-oriented cousin.
