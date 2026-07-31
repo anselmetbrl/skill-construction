@@ -11,3 +11,6 @@ trust        whole
 
 ## position (multi-pass)
 C2∩C7 · db/research · HIGH. the mature KR substrate; hyperon's predecessor, typedb's AGI-oriented cousin.
+
+## #graph (resolved)
+succeeded-by ← hyperon (OpenCog Hyperon positions as successor to OpenCog-Classic KR)

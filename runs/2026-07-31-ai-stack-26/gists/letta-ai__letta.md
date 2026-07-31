@@ -11,3 +11,6 @@ trust        whole — the legacy status is disclosed plainly, not hidden
 
 ## position (multi-pass)
 C3 agent-memory · HIGH but LEGACY — read letta-code first; kept for lineage (ex-MemGPT).
+
+## #graph (resolved)
+superseded-by ← letta-code (letta README: "development has moved to letta-code")

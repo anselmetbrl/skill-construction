@@ -11,3 +11,6 @@ trust        whole
 
 ## position (multi-pass)
 C2 neurosymbolic/AGI · HIGH. anchors the AGI-language axis together with atomspace (its predecessor).
+
+## #graph (resolved)
+alternative-to → atomspace (MeTTa "a successor to the OpenCog Classic Atomese language"; nuance: language≈store, same lineage)

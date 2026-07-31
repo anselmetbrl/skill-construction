@@ -11,3 +11,6 @@ trust        whole
 
 ## position (multi-pass)
 C3 agent-harness · HIGH. the live node; the collection's closest mirror of this run's OWN harness (skills+subagents+hooks).
+
+## #graph (resolved)
+alternative-to → letta (this repo is superseded BY letta-code; self-stated succession)
