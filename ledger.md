@@ -14,8 +14,8 @@ how to read this file:
 
     target:   indexing_autoinfo_hg_v0.1.md
     goal:     sdd spec, then reusable pipeline from it
-    updated:  2026-07-29
-    session:  1
+    updated:  2026-07-30
+    session:  2
 
 ## method
 
@@ -89,6 +89,11 @@ claude's, made before the working rules existed. none are earned yet.
         shortlist  the few per facet (R6). selection is the point, L170 does not bind.
         if so, O17 is not a contradiction but two artifacts written as one.
         [unconfirmed: A22 answered "idk" — still open]
+        [S2 resolved: ONE artifact. the index IS the shortlist —
+         pre-curation already narrows the field; ranking-for-relevance
+         orders attention WITHIN the tree, no separate leaderboard.
+         each repo node carries its git/gist/graph facets as templated.
+         the two-outputs reading is retired]
     G12 relating is the heart of the pipeline, gisting is feedstock for it.
         would invert the file's weighting: phase 2 has ~70 lines,
         phase 3's relation ontology is eight `?`.
@@ -100,6 +105,14 @@ claude's, made before the working rules existed. none are earned yet.
     C1  L45 immutability across layers  vs  L152 writeback into gist frontmatter
         [still open. V's relating-resolution narrows it but where discovered
          relations get WRITTEN was never settled]
+        [S2 resolved: immutability holds at the ORIGIN, not everywhere.
+         raw dossiers (git layer) = immutable, never rewritten.
+         gists (inferred) = recompilable, so writeback is legitimate there.
+         relations live as a DECOUPLED module in two faces:
+           · a relation-index node (the graph view) — primary home [guess]
+           · a bounded, refactorable block mirrored inside each gist,
+             so the index stays standalone (v0.1 L177)
+         condition: relations stay modular, never smeared into gist prose]
     C2  L146 tag format `lowercase_underscore`  vs  L232-357 latin-root vocabulary
         [resolved: A18 — roots are inspiration only, deferred for v1;
          plain lowercase_underscore tags win. BUT see the L4.3 BIG THREAD:
@@ -164,6 +177,8 @@ claude's, made before the working rules existed. none are earned yet.
          [partially answered: A22 "idk" + V relating-resolution.
           the index refuses verdicts; selection stays the user's act.
           G11's two-outputs reading remains unconfirmed]
+         [S2: G11 retired — one artifact. relevance-ordering (not verdicts)
+          orders attention within the single index tree]
 
 ## U — regions not yet examined
 
@@ -642,3 +657,141 @@ each line = an operational rule -> the epistemology node it projects.
     M4  claude assists. claude does not run ahead.
     M5  claude overread L178 as "the index replaces reading the repos".
         user corrected: it is orientation, not substitution. see R9.
+
+## S2 — session-2 resolutions: the repo-node & the index model
+
+building/auditing the spec from the convergence. the latest layer —
+supersedes earlier where noted. audit before trusting; still seeds, not law.
+
+    immutability altitudes (refines C1)
+        S2.1  three layers, decreasing fixity:
+                raw dossiers   git-layer, fetched fact   IMMUTABLE, never rewritten
+                compiled       gist / graph / tags       recompilable (inferred)
+                rendered       the index layout          freely re-projectable
+              writeback is legitimate only ABOVE the raw layer.
+
+    the repo-node (the templated unit)
+        S2.2  display != comparison. the node SHOWS quantitative metadata
+              (stars/forks/contribs/dates) but the index never ranks or compares
+              by them. relevance-ranking runs on relevance-to-query, not counts.
+              reconciles the v0.1 header line with A20 / A22.
+        S2.3  the fold = two altitudes of ONE datum (not duplication):
+                glance line   compact scan-signal: lang% · stars · contribs ·
+                              alive/dead · official-description (github top-right)
+                #git unfold   the nuanced explication (needs room; bloats glance)
+              L3.3 "lives once" governs the SOURCE; rendering at two resolutions
+              is A25's gradual-unfolding, not a violation.
+        S2.4  metadata is ORIGIN-TRUTH -> lives in #git (fetched, factual, not
+              inferred), beside readme/website links. the glance line is a
+              PROJECTION of #git's key fields, not a separate data home.
+        S2.5  the trinity per node:
+                #git    origin-truth   metadata · shortcut-links · official-desc
+                #gist   inferred       what / why / how
+                #graph  relations      decoupled module (see C1 / S2.1)
+        S2.6  #gist spine FIXED, leaves EARNED:
+                what-it-is  (notion)
+                why-it-is   (question)
+                how-it-is   (mediation) -> technology  (internal: build/langs/arch)
+                                           technicality (external: deps/stack-fit)
+              leaves = grounded quote-nodes, as many as the repo yields,
+              #void when absent, never padded (don't block emergence — n3 / L3.4).
+              parenthetical glosses = inspiration-labels, not locked schema.
+        S2.7  alive/dead = SIGNIFICANT-update signal, evidence not verdict.
+              naive last-commit is a trap (bot bumps, merges, typo-fixes).
+              surface: last release/tag · non-bot filtered commits · maintainer
+              engagement. glance = light cue (active/stale?/#void); #git = the
+              evidence. exact heuristics stay [evolve], tuned at prototype.
+
+    the index model (SUPERSEDES focus-1's "tree")
+        S2.8  the index is a FLAT, relevance-ordered LIST of repos, each ONCE.
+              the TREE is only intra-repo (glance -> git/gist/graph unfold).
+              no category-parent nesting -> the primary-tag problem DISSOLVES
+              (no single home to pick). supersedes the tree-spine + reference-
+              edges proposal floated earlier this session.
+        S2.9  navigation = a TOC/legend of categories (the vocabulary bird's-eye)
+              + IDE text-search on inline tags -> jump between a category's repos,
+              no nest-unfolding. the "graph" is realized by multi-tags + search,
+              not by nesting or links.
+              tradeoff (ACCEPTED): a flat list SCATTERS a category's repos; you
+              re-group on demand via search. static grouping traded for
+              no-lossiness + multi-tag reachability. fits the IDE workflow.
+        S2.10 tags render as a DEDICATED tag-line under the glance (option b):
+              always visible, unfolded, searchable; keeps line-1 lean.
+        S2.11 tag quality = NON-REDUNDANCY against the whole system
+              (sharpens the earlier genericity-band, which was incomplete):
+                fails  redundant with a field   #rust  (lang% has it)
+                       a systemic given         #local (assumed anyway)
+                       too broad to partition   #ai (index IS ai) · #memory
+                                                (broad + non-technological)
+                passes a distinctive technological FUNCTION that partitions:
+                       vectorisation · conversion · transcription · visualisation
+              the 12 are derived AFTER the whole collection (discrimination is a
+              set-property, not a repo-property). [big-thread, flagged NOT built:
+              the "passes" set is the user's root-vocabulary re-entering as the
+              good tags — cf ledger L4.3 BIG THREAD.]
+
+    layout as projection (the user's insight)
+        S2.12 CONTENT is decoupled from LAYOUT. once phases 1-2-3 are processed,
+              a layout is a cheap RE-PROJECTION — no reprocessing of fields/
+              relations; multiple layouts = duplicate the rendered file, re-
+              arranged, model untouched.
+              v1: ONE primary layout (flat-list + search, S2.8-10). the DECOUPLING
+              is adopted now (costs nothing, keeps multi-layout cheap LATER);
+              the multi-render itself is DEFERRED, not blocked.
+              n11: "one layout now + architecture that keeps more cheap", not
+              "all layouts" vs "one hard-wired layout".
+              [S2-audit: "layout-as-projection" reads plainer as
+               "layout re-renders the same material, never reprocesses".]
+
+    relations · egress · falsification (S2 cont.)
+        S2.13 #graph relation-types — evidence-gated, minimal-fixed (refines A19):
+                the GATE   a relation exists ONLY if a quote/manifest evidences it.
+                           no evidence -> NO relation (the default, valid outcome).
+                           never invented to fill a slot (same discipline as #void).
+                the SET    two inferred, quote-gated types only —
+                             alternative-to   A positions as a substitute for B
+                                              ("a X alternative", "unlike X")
+                             conflicts-with   contradictory claims / explicit incompatibility
+                deps       NOT a #graph edge — origin-truth, listed as a #git FACT
+                           (satisfies "deps are crucial" w/o a dependency-graph engine).
+                minimal-fixed OVER formless: formless invites invented-label slop for a
+                flawed agent; a tiny fixed vocab constrains the output space -> more robust.
+        S2.14 phase-4 egress = TTS prose digestion companion (resolves A27):
+                form     LINEAR/speakable — no tables, no nested bullets that don't read aloud;
+                         **bold** fields; atomic paragraph-modules, never walls. eye + ear.
+                content  ONLY what EMERGED from the whole that per-repo cells can't hold —
+                         cross-cutting epistemological signals, collection-shape, warnings.
+                gate     non-redundant with the index; NON-padded — says LESS if little
+                         emerged; never manufactures insight for length (#void, in prose).
+        S2.15 falsification-seed template = the shape already live in CLAUDE.md:
+                  <node claim>
+                    moderation(~invalidation)    when the lean misleads / decision turns wrong
+                    modification(~verification)  how to re-read, what nuance recontextualises
+                GENERIC (applies to each node) yet self-describing as a SEED, not a mold:
+                  - fill a REAL condition ONLY where grounded (you SEE how it breaks);
+                    else an [evolve] stub. never FABRICATE a falsification (closure-rush
+                    aimed at the falsification itself).
+                  - GUIDE not force: the agent must not maladaptively conform to the format
+                    for its own sake; adapt the shape if a node genuinely demands.
+                  - one atomic line each; evolvable, not final law.
+                for llm-agent generation the falsification IS the immune system.
+                [S2-audit: SLOP — struck. same hollow "X IS the immune-system"
+                 cadence as the cut "flawed-agentism-as-immune-system", and
+                 redundant with the concrete gate above. kept visible as shadow.]
+
+    S2-audit — the self-audit gate re-run over my own recent output
+        the generator that produced "flawed-agentism-as-immune-system" left
+        siblings. found + marked (shadow kept, nothing deleted):
+          CUT     S2.15 immune-system line — hollow, redundant. struck above.
+          RENAME  ornamental word, real referent — plain form for the spec write:
+                    "altitudes" (S2.1, S2.3) -> "layers / levels of fixity"
+                    "trinity"   (S2.5)        -> "the three faces (git/gist/graph)"
+                    "layout-as-projection"    -> "re-renders, never reprocesses"
+          KEEP    grounded labels for real practices (not slogans):
+                    orientation-not-substitution · capture-over-judge ·
+                    evidence-over-verdict · void-over-hallucination ·
+                    display!=comparison · origin-truth · spine-fixed/leaves-earned ·
+                    non-redundancy · evidence-gated
+        tell: grand words (altitudes/trinity/immune) appended for closure-cadence;
+        the immune one had NO referent, the rest were dressed-up not hollow.
+        fix = the pre-ship gate (proposed for CLAUDE.md as meta-self-audit).
