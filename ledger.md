@@ -841,3 +841,90 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
         grounding: the recursion is the ledger's own (F12) — the pipeline demands
         impartiality of repos, so the agent runs it on itself first.
         written into spec.md §2; CLAUDE.md openended updated.
+
+## S3 — session-3 resolutions: the build session
+
+turning `spec.md` into something that RUNS. the spec is NOT re-derived here.
+this layer records what the BUILD settled, measured, or recovered.
+
+    S3.1 packaging RESOLVED (closes bootstrap-build's first open)
+        deliverable = an installable skill, `SKILL.md` + `references/`.
+        SKILL.md carries the chain, the gates, the discipline — lean.
+        per-phase reference files hold the detail, loaded on demand.
+        rationale: load granularity matches run granularity — the agent reads
+        `tag.md` when tagging and never otherwise. also dissolves the
+        installable-vs-pasteable fork; it is still plain markdown.
+        note: A36's "one file" answered Q36 about the SPEC file (now done),
+        not about the skill. the constraint did not carry over.
+
+    S3.2 artifact tree RESOLVED (closes bootstrap-build's second open)
+        skill    `.claude/skills/holistic-meta-index/` — repo-local while building,
+                 so it is diffable and testable in-session; copied to
+                 `~/.claude/skills/` when it earns it.
+        run      `runs/<run-id>/` — seeds · dossiers · gists · graph · INDEX · EMERGE.
+        three sub-decisions, each traced:
+          no BLOCKED_REPORT.md   v0.1 L64 wanted one. `failures-stay-visible`
+                                 supersedes it — blocked repos stay IN the index.
+                                 a separate file re-hides them.
+          no state.json          v0.1 L50-52 already put `status` in each dossier's
+                                 own frontmatter; git carries phase checkpoints.
+                                 a third store is a fourth place to drift.
+                                 => retires G5 as UNNECESSARY, not unconfirmed.
+          graph.md kept          C1/S2 marked its primary-home status [guess].
+                                 kept because `relate` is a whole-collection pass
+                                 and needs one place to compile before mirroring.
+                                 still a guess.
+
+    S3.3 fetch routes MEASURED — not guessed (closes bootstrap-build's `auth`,
+         and fires `fetch.ladder`'s own moderation seed for real)
+        measured in the build container, 2026-07-31:
+          api.github.com/rate_limit         core 15000/hr — token-injected.
+                                            the feared ~60 unauth ceiling is MOOT.
+          api.github.com/repos/<out-of-scope>   403 — session-gated per repo,
+                                            needs `add_repo` per seed
+          raw.githubusercontent.com/...     200 — any public repo
+          github.com/<repo> (html)          403
+          non-github sites (docs, wikis)    200
+        => the fault line cuts THROUGH `fetch`. the `#git` half (stars, contribs,
+           lang%, license, issues, dates, official-description) is gated here;
+           the `#gist` feedstock (readme, manifests, docs) is not.
+        => bites at 100-300. does NOT bite at 3-5 (`add_repo` per seed is fine).
+        => [guess] container-scoped, not skill-scoped. on the user's own machine
+           none of this applies.
+        this is exactly `fetch.moderation`: "a source needs a fetch route none of
+        the rungs cover" → add the rung, record which one worked. it fired within
+        ten minutes of the build opening. the spec caught it before claude did.
+
+    S3.4 four v0.1 lines RECOVERED — present in neither spec.md nor this ledger
+        found by grepping both against the raw source. NOT spec failures: L3.4
+        kept the spec intent-level on purpose, and these are concretes. but they
+        would have been lost had the build read only spec.md.
+          v0.1 L149  lost-in-the-middle — order context so neither end is buried
+          v0.1 L61   thread 1 by 1, sequentially
+          v0.1 L62   never rabbithole into codebase subdirectory recursion
+          v0.1 L67   checkpoint-pause after the fetch phase, await proceed,
+                     DO NOT TERMINATE
+        all four written into SKILL.md.
+        (v0.1 L173's "tabs not spaces" is deliberately NOT carried — spec.md's
+         `index.render` says "indentation" without ruling the character. left open.)
+
+    S3.5 scale — the two answers that make ~300 realistic   [build-note, unconfirmed]
+        relations   NOT computed pairwise. `relate.gate` (no quote → no relation)
+                    means relations are HARVESTED from the text during gisting
+                    and only RESOLVED against the collection in phase 6.
+                    N² never happens. scales flat.
+        multi pass  ~300 gists ≈ 120-240k tokens — does not fit one context.
+                    `the-agent-does-the-reading.moderation` already ruled it:
+                    split by BATCH, not by delegation. a compact one-line-per-repo
+                    `_whole.md` stays resident; gists re-read in batches against it.
+        both are BUILD-TIME concretions, marked `[build-note]` in SKILL.md.
+        they are guesses until a real run confirms them.
+
+    S3.6 the gate's home — a live-once tension, resolved
+        spec §2 says the gate is "defined once in CLAUDE.md, not restated here".
+        but an installed skill runs in repos that have no such CLAUDE.md — it
+        would then carry NO gate at all.
+        => the gate lives in `references/self-check.md`, one place, inside the
+           skill, portable. SKILL.md points at it and does not restate it.
+        live-once holds within the skill's own boundary, which is the boundary
+        that travels.
