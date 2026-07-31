@@ -252,17 +252,29 @@
 
 ---
 
-## 2 · self-audit — enforced against the finished work, not as a phase
+## 2 · self-check — one gate, two objects, two grains
 
-    what          did this run slop, flatten, hype, or pretend to understand?    (A35 A22)
-    when          inward quality control over the output — distinct from `emerge`,
-                  which faces outward to the user
-    how           [open] this overlaps `CLAUDE.md`'s root `practice` (the pre-ship gate:
-                  concrete-referent · live-once · provenance · cadence-suspicion).
-                  ONE gate serving both, or two with different objects — the agent's
-                  own prose vs the pipeline's artifacts? resolve with the user.
-    moderation    [evolve] the audit becomes a ritual that always passes
+> runs against the work, never as a step in the chain. inward quality control —
+> distinct from `emerge`, which faces outward to the user.
+
+    what          did this pass slop, flatten, hype, or pretend to understand?  (A35 A22)
+    gate          ONE gate, defined once in `CLAUDE.md` root `practice` —
+                  concrete-referent · live-once · provenance · cadence-suspicion.
+                  not restated here; this node states its OBJECTS and its TIMING.
+    objects       the agent's own prose  ·  and every artifact the pipeline emits
+                  (dossier · gist · tag · relation · index · emerge)
+    why one gate  the same four tests catch a superlative in a README and a superlative
+                  in the agent's own sentence. the impartiality the pipeline demands of
+                  repos is run on the agent FIRST                        (ledger F12)
+    grain micro   after each PASS — per-repo, per-unit self-evaluation
+    grain macro   before and after each PHASE — entry check, exit check
+    not during    an llm cannot meaningfully self-monitor mid-generation. naming that
+                  honestly beats specifying a check that never runs           (user, L2.3)
+    on failure    self-heal: fix in place, or revert that unit under git and try again.
+                  the failure AND its resolution stay visible
+    moderation    [evolve] the check becomes a ritual that always passes
     modification  [evolve] audit against a SAMPLE the user picks, not one the agent picks
+    links         checkpoint-and-resume · failures-stay-visible · signal-over-saturation
 
 ---
 
@@ -287,8 +299,9 @@
     - `[open]` significant-update heuristics: releases/tags · non-bot commit filtering ·
       maintainer responsiveness. naive last-commit is a trap (bot bumps, merges).    (S2.7)
     - `[open]` does the 2-type relation set hold at 300 repos?
-    - `[open]` self-audit vs the stance file's pre-ship gate — one or two.
-    - `[open]` enforcement grain: before / during / after each pass. during might be irrealistic for how an agentic llm workds, micro self-reflection after each pass (macro before and after each phase) is crucial  for per-pass self-evaluation and self-healing debug git try-again resolution             (L2.3)
+    - `[resolved]` self-audit vs the stance file's gate, and the enforcement grain —
+      both were one question. ONE gate (CLAUDE.md), two objects, micro-per-pass and
+      macro-per-phase, never "during". now `§2 · self-check`.
     - `[open]` a glossary of the user's idiolect — deferred.
     - `[resolved]` BIG THREAD — the latin-root vocabulary was never in contradiction:
       it is deferred as a TAXONOMY (a closed list) and live as a LANGUAGE (a generator).

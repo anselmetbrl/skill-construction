@@ -822,3 +822,22 @@ supersedes earlier where noted. audit before trusting; still seeds, not law.
         user's own coinage; "holistical" -> "holistic" at the user's call.
         note: `as_dataset-graph` names the COMPILED MODEL, not the rendered file —
         consistent with S2.12 (the flat index is one rendering of a graph-shaped set).
+
+    S2.18 self-check RESOLVED — closes both the one-gate-or-two question and the
+          enforcement grain (L2.3, open since session 1)
+        they were ONE question: when does the agent check itself, and against what.
+          ONE gate     the four tests already in CLAUDE.md root `practice`
+                       (concrete-referent · live-once · provenance · cadence-suspicion).
+                       the SAME tests apply to a gist as to the agent's own prose —
+                       splitting them into two lists would duplicate a signal (L3.3).
+          two objects  the agent's prose · every pipeline artifact
+          two grains   micro  after each PASS   (per-repo self-evaluation)
+                       macro  before and after each PHASE (entry/exit)
+          not during   an llm cannot meaningfully self-monitor mid-generation. the user
+                       called this out; naming it honestly beats specifying a check that
+                       never runs.
+          on failure   fix in place, or revert that unit under git and retry; failure AND
+                       resolution stay visible.
+        grounding: the recursion is the ledger's own (F12) — the pipeline demands
+        impartiality of repos, so the agent runs it on itself first.
+        written into spec.md §2; CLAUDE.md openended updated.
