@@ -1,5 +1,8 @@
-# spec — the indexing pipeline, v1
-<!-- working name deferred to the user (A38). modular placeholder: indexing · autoinfo · hg -->
+# spec — holistic-meta-index, v1
+
+> **the name.** `holistic-meta-indexing_of_multi-project-research_as_dataset-graph_for_human-attention`
+> four modules — ACT · OBJECT · FORM · PURPOSE. `-` binds a compound, `_` marks a module
+> boundary. invocation handle: `holistic-meta-index`.
 
 > **what this is.** a declarative v1 spec for a pipeline that turns a hand-curated list of
 > github repos into a navigable meta-index giving BIRD'S-EYE orientation. one file.
@@ -56,7 +59,7 @@
     practice      `#void` for unknown/absent · never pad a slot to look complete
     moderation    [evolve] so much `#void` that the entry conveys nothing
     modification  [evolve] say plainly that the repo is uninformative — that IS the finding
-    links         gist · tag · relate · egress
+    links         gist · tag · relate · emerge
 
 ### what-can-be-rewritten — three layers, decreasing fixity
     raw           dossiers, fetched fact          FROZEN — never rewritten     (v0.1 L45)
@@ -73,7 +76,7 @@
     practice      the agent reads and writes gists directly — beware exporting responsibility
     moderation    [evolve] volume genuinely exceeds one agent's reach
     modification  [evolve] split by BATCH, not by delegation — same agent, more passes
-    links         gist · tag · relate · egress
+    links         gist · tag · relate · emerge
 
 ### failures-stay-visible — a blocked repo is an outcome, not an omission
     why           silent skipping is the one failure that cannot be audited      (v0.1 L64 L102)
@@ -99,13 +102,13 @@
                   protect signal, never to hit a number
     moderation    [evolve] compression drops a distinction the user actually needed
     modification  [evolve] keep the distinction, move the detail into the fold
-    links         tag · index · egress
+    links         tag · index · emerge
 
 ---
 
 ## 1 · the chain
 
-    seeds → dossiers → gists → tags → relations → index    (+ egress companion)
+    seeds → dossiers → gists → tags → relations → index    (+ emerge companion)
 
 ### seeds — a pre-curated list, entering as-is
     in            a list of github links + an optional contextual prompt        (A3)
@@ -139,8 +142,6 @@
     pass uni      augment from the repo ALONE                                       (A7)
     pass multi    after ALL uni is done, re-read each from the evolved whole        (A7)
                   synthesis from the holistic holons, not reductionism              (A9)
-    pass synth    [open] a further self-reflexive pass from the evolved context —
-                  genuinely distinct from multi, or the same act named twice?       (A8)
     spine         FIXED — what-it-is (notion) · why-it-is (question) · how-it-is (mediation)
                     how-it-is splits   technology   internal: what it is built of
                                        technicality external: dependencies, stack-fit  (A20)
@@ -226,7 +227,7 @@
     links         orientation-not-substitution · signal-over-saturation ·
                   what-can-be-rewritten · failures-stay-visible
 
-### egress — a spoken companion that helps digest the index
+### emerge — a spoken companion that helps digest the index
     out           a post-scriptum beside the index. NOT a second index, NOT a self-audit (A27)
     form          TTS prose — linear and speakable · no tables, no nesting that does not
                   read aloud
@@ -246,7 +247,7 @@
 ## 2 · self-audit — enforced against the finished work, not as a phase
 
     what          did this run slop, flatten, hype, or pretend to understand?    (A35 A22)
-    when          inward quality control over the output — distinct from `egress`,
+    when          inward quality control over the output — distinct from `emerge`,
                   which faces outward to the user
     how           [open] this overlaps `CLAUDE.md`'s root `practice` (the pre-ship gate:
                   concrete-referent · live-once · provenance · cadence-suspicion).
@@ -274,13 +275,11 @@
 
     - every `moderation`/`modification` is an evolvable seed. prototype output is the
       real falsification: they prove out or break in practice, never on paper.
-    - `[open]` the synth pass — distinct from multi, or the same act named twice?     (A8)
     - `[open]` significant-update heuristics: releases/tags · non-bot commit filtering ·
       maintainer responsiveness. naive last-commit is a trap (bot bumps, merges).    (S2.7)
     - `[open]` does the 2-type relation set hold at 300 repos?
     - `[open]` self-audit vs the stance file's pre-ship gate — one or two.
-    - `[open]` enforcement grain: before / during / after each pass.                 (L2.3)
-    - `[open]` naming — deferred to the user.                                        (A38)
+    - `[open]` enforcement grain: before / during / after each pass. during might be irrealistic for how an agentic llm workds, micro self-reflection after each pass (macro before and after each phase) is crucial  for per-pass self-evaluation and self-healing debug git try-again resolution             (L2.3)
     - `[open]` a glossary of the user's idiolect — deferred.
     - `[open]` BIG THREAD: the latin-root vocabulary is deferred as TAGS, yet it keeps
       re-entering as the META-language (moderation/modification here; the tags that
