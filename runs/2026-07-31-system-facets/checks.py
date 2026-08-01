@@ -18,9 +18,22 @@ D = sorted(glob.glob(os.path.join(RUN, "dossiers", "*.md")))
 EDGE_TYPES = {"alternative-to", "conflicts-with"}
 
 
-def units(path):
-    """yield (lineno, head_text, unit_text) for every 4-space claim head."""
+def units(path, skip_harvest=True):
+    """yield (lineno, head_text, unit_text) for every 4-space claim head.
+
+    the #graph-harvest block is EXCLUDED by default: harvested spans are not claims.
+    they carry their own format ("span" (link) -> names X) and their own check, C3.
+    """
     lines = open(path).read().split("\n")
+    if skip_harvest:
+        out, inh = [], False
+        for l in lines:
+            if l.startswith("#graph-harvest"):
+                inh = True
+            elif inh and l.startswith("## "):
+                inh = False
+            out.append("" if inh else l)
+        lines = out
     heads = [i for i, l in enumerate(lines)
              if re.match(r"^ {4}\S", l)]
     for n, i in enumerate(heads):
@@ -56,22 +69,34 @@ def c2_graph_types():
 
 
 def c3_graph_fill():
-    """every harvested relation carries a quote and a link."""
-    bad, filled = [], 0
+    """every harvest entry carries a verbatim quote, a link, and a resolved name.
+    an empty harvest renders exactly #void — commentary in a harvest slot is a
+    violation."""
+    bad, entries = [], 0
     for f in G:
+        rel = os.path.relpath(f, RUN)
         txt = open(f).read()
         if "#graph-harvest" not in txt:
+            bad.append((rel, 0, "no #graph-harvest block"))
             continue
         block = txt.split("#graph-harvest", 1)[1].split("\n## ", 1)[0]
-        if "NONE" in block:
-            continue
-        for line in block.split("\n"):
-            if "→ names" in line or "→ resolves" in line:
-                filled += 1
-        # a harvest block with content must carry at least one quote and link
-        if block.strip() and not (re.search(r'"', block) and re.search(r"https?://", block)):
-            bad.append((os.path.relpath(f, RUN), "harvest block lacks quote or link"))
-    return filled, bad
+        if "#void" in block:
+            continue                      # an honest empty harvest
+        lines = block.split("\n")
+        heads = [i for i, l in enumerate(lines) if re.match(r"^ {4}\S", l)]
+        if not heads:
+            bad.append((rel, 0, "harvest block neither #void nor populated"))
+        for n, i in enumerate(heads):
+            end = heads[n + 1] if n + 1 < len(heads) else len(lines)
+            unit = "\n".join(lines[i:end])
+            entries += 1
+            if not unit.lstrip().startswith('"'):
+                bad.append((rel, i + 1, "entry does not open with a verbatim quote"))
+            elif not re.search(r"https?://", unit):
+                bad.append((rel, i + 1, "entry carries no link"))
+            elif "→ names" not in unit and "→ resolves" not in unit:
+                bad.append((rel, i + 1, "entry resolves to no name"))
+    return entries, bad
 
 
 def c4_counts_in_prose():

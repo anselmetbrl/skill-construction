@@ -19,7 +19,7 @@
 ## why-it-is
 
     the need is named in one clause and not elaborated — clearer semantics than the
-    language it succeeds
+      language it succeeds
       ← "a successor to the OpenCog Classic Atomese language with clear semantics
          supporting meta-language features, different types of inference, etc."
          (https://raw.githubusercontent.com/trueagi-io/hyperon-experimental/HEAD/README.md)
@@ -107,6 +107,6 @@
 ## finding — the shape of this readme
 
     the what and why are concentrated in one short Overview; the remaining ~90% is
-    build, install and troubleshooting. leaves beyond the three above are thin because
-    the material is thin on them, not because they were skipped.
+      build, install and troubleshooting. leaves beyond the three above are thin
+      because the material is thin on them, not because they were skipped.
       #void — an observation about the source, carrying no claim about the project

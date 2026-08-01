@@ -13,7 +13,7 @@
 ## why-it-is
 
     the need is stated as six design goals rather than a problem — capability, ease,
-    data-orientation, modularity, speed, compile time
+      data-orientation, modularity, speed, compile time
       ← "* **Capable**: Offer a complete 2D and 3D feature set … * **Data Focused**:
          Data-oriented architecture using the Entity Component System paradigm …
          * **Productive**: Changes should compile quickly ... waiting isn't fun"
