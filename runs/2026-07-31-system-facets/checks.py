@@ -1,0 +1,173 @@
+#!/usr/bin/env python3
+"""checks — the mechanical gate for run 2026-07-31-system-facets.
+
+every check is a COUNT with a definite answer. nothing here asks for judgment.
+output is an EXHIBIT shown to the user, never a gate that silently passes.
+
+gist line convention, so C1 is parseable:
+    exactly 4 spaces + text   = a CLAIM HEAD. must be grounded.
+    6 or more spaces + text   = continuation (wrapped claim, quote, or link).
+    a claim is GROUNDED if its unit (head + continuations, up to the next head)
+    contains either  ← "..." (http...)  or  #void.
+"""
+import re, sys, glob, os, collections
+
+RUN = os.path.dirname(os.path.abspath(__file__))
+G = sorted(glob.glob(os.path.join(RUN, "gists", "*.md")))
+D = sorted(glob.glob(os.path.join(RUN, "dossiers", "*.md")))
+EDGE_TYPES = {"alternative-to", "conflicts-with"}
+
+
+def units(path):
+    """yield (lineno, head_text, unit_text) for every 4-space claim head."""
+    lines = open(path).read().split("\n")
+    heads = [i for i, l in enumerate(lines)
+             if re.match(r"^ {4}\S", l)]
+    for n, i in enumerate(heads):
+        end = heads[n + 1] if n + 1 < len(heads) else len(lines)
+        yield i + 1, lines[i].strip(), "\n".join(lines[i:end])
+
+
+def c1_grounding():
+    """every gist claim head resolves to a quote+link or is a void."""
+    bad = []
+    total = 0
+    for f in G:
+        for ln, head, unit in units(f):
+            total += 1
+            if "#void" in unit:
+                continue
+            if "←" in unit and re.search(r"\(https?://", unit):
+                continue
+            bad.append((os.path.relpath(f, RUN), ln, head[:64]))
+    return total, bad
+
+
+def c2_graph_types():
+    """coined edge types = 0. only the two sanctioned types may appear as edges."""
+    bad = []
+    for f in G:
+        for ln, head, unit in units(f):
+            m = re.findall(r"\[(?:edge|type):\s*([a-z-]+)\]", unit)
+            for t in m:
+                if t not in EDGE_TYPES:
+                    bad.append((os.path.relpath(f, RUN), ln, t))
+    return bad
+
+
+def c3_graph_fill():
+    """every harvested relation carries a quote and a link."""
+    bad, filled = [], 0
+    for f in G:
+        txt = open(f).read()
+        if "#graph-harvest" not in txt:
+            continue
+        block = txt.split("#graph-harvest", 1)[1].split("\n## ", 1)[0]
+        if "NONE" in block:
+            continue
+        for line in block.split("\n"):
+            if "→ names" in line or "→ resolves" in line:
+                filled += 1
+        # a harvest block with content must carry at least one quote and link
+        if block.strip() and not (re.search(r'"', block) and re.search(r"https?://", block)):
+            bad.append((os.path.relpath(f, RUN), "harvest block lacks quote or link"))
+    return filled, bad
+
+
+def c4_counts_in_prose():
+    """star/fork/issue/contributor numbers outside glance lines = 0, in gists."""
+    pat = re.compile(r"\b\d[\d,.]*\s*k?\s*(stars?|forks?|watchers?|contributors?)\b", re.I)
+    bad = []
+    for f in G:
+        for i, l in enumerate(open(f).read().split("\n"), 1):
+            if pat.search(l):
+                bad.append((os.path.relpath(f, RUN), i, l.strip()[:64]))
+    return bad
+
+
+def c6_voids():
+    """tally #void per gist. an honesty rate, never a score to minimise."""
+    t = {}
+    for f in G:
+        t[os.path.basename(f)[:-3]] = open(f).read().count("#void")
+    return t
+
+
+def c7_flag_grounding():
+    """every flag that FIRED carries a quote; every flag that did not is a void."""
+    bad, fired = [], 0
+    for f in G:
+        txt = open(f).read()
+        if "## flags" not in txt:
+            bad.append((os.path.relpath(f, RUN), "no flags section"))
+            continue
+        block = txt.split("## flags", 1)[1]
+        for ln, head, unit in units_from_text(block, f):
+            if "#void" in unit:
+                continue
+            fired += 1
+            if not ("←" in unit and re.search(r"\(https?://", unit)):
+                bad.append((os.path.relpath(f, RUN), ln, head[:64]))
+    return fired, bad
+
+
+def units_from_text(text, label):
+    lines = text.split("\n")
+    heads = [i for i, l in enumerate(lines) if re.match(r"^ {4}\S", l)]
+    for n, i in enumerate(heads):
+        end = heads[n + 1] if n + 1 < len(heads) else len(lines)
+        yield i + 1, lines[i].strip(), "\n".join(lines[i:end])
+
+
+def c9_coverage():
+    """one gist per dossier, no orphans either way."""
+    dn = {os.path.basename(p)[:-3] for p in D}
+    gn = {os.path.basename(p)[:-3] for p in G}
+    return sorted(dn - gn), sorted(gn - dn)
+
+
+if __name__ == "__main__":
+    print("=" * 66)
+    print("CHECK REPORT — run 2026-07-31-system-facets")
+    print("=" * 66)
+
+    tot, bad = c1_grounding()
+    print(f"\nC1 grounding      {tot} claim heads · violations = {len(bad)}")
+    for f, ln, h in bad[:40]:
+        print(f"    {f}:{ln}  {h}")
+
+    b2 = c2_graph_types()
+    print(f"\nC2 graph-types    coined types = {len(b2)}")
+    for f, ln, t in b2:
+        print(f"    {f}:{ln}  '{t}'")
+
+    filled, b3 = c3_graph_fill()
+    print(f"\nC3 graph-fill     resolved harvest lines = {filled} · malformed blocks = {len(b3)}")
+    for row in b3:
+        print(f"    {row}")
+
+    b4 = c4_counts_in_prose()
+    print(f"\nC4 counts-in-prose violations = {len(b4)}")
+    for f, ln, l in b4:
+        print(f"    {f}:{ln}  {l}")
+
+    v = c6_voids()
+    print(f"\nC6 voids-reported total = {sum(v.values())} across {len(v)} gists")
+    for k in sorted(v, key=lambda x: -v[x]):
+        print(f"    {v[k]:>3}  {k}")
+
+    fired, b7 = c7_flag_grounding()
+    print(f"\nC7 flag-grounding fired flags = {fired} · ungrounded = {len(b7)}")
+    for row in b7:
+        print(f"    {row}")
+
+    miss, orph = c9_coverage()
+    print(f"\nC9 coverage       dossiers without gist = {len(miss)} · orphan gists = {len(orph)}")
+    for m in miss:
+        print(f"    missing gist: {m}")
+    for o in orph:
+        print(f"    orphan gist:  {o}")
+
+    print()
+    fail = len(bad) + len(b2) + len(b3) + len(b4) + len(b7) + len(miss) + len(orph)
+    print(f"TOTAL VIOLATIONS = {fail}")
