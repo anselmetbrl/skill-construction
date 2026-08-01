@@ -100,14 +100,35 @@ def c3_graph_fill():
 
 
 def c4_counts_in_prose():
-    """star/fork/issue/contributor numbers outside glance lines = 0, in gists."""
+    """star/fork/issue/contributor numbers outside glance lines = 0, in gists.
+
+    COLLISION, recorded 2026-07-31 and OPEN for the user (see decisions.md D1):
+    C4 exists to stop the AGENT comparing repos by count. claims-resolve-to-spans
+    requires every claim to carry its verbatim quote. when a project's OWN readme
+    states a count and that count IS the evidence for a flag, the two rules collide.
+    resolution taken, provisionally: a count inside a verbatim quoted span is NOT a
+    violation, but it is COUNTED AND LISTED SEPARATELY so nothing is hidden. a count
+    in the agent's own prose remains a violation. the user rules on whether this
+    stands.
+    """
     pat = re.compile(r"\b\d[\d,.]*\s*k?\s*(stars?|forks?|watchers?|contributors?)\b", re.I)
-    bad = []
+    bad, quoted = [], []
     for f in G:
-        for i, l in enumerate(open(f).read().split("\n"), 1):
-            if pat.search(l):
-                bad.append((os.path.relpath(f, RUN), i, l.strip()[:64]))
-    return bad
+        rel = os.path.relpath(f, RUN)
+        lines = open(f).read().split("\n")
+        for i, l in enumerate(lines, 1):
+            if not pat.search(l):
+                continue
+            # inside a quoted span? the unit's head carries ← and the line is a quote
+            unit_start = i - 1
+            while unit_start > 0 and not re.match(r"^ {4}\S", lines[unit_start]):
+                unit_start -= 1
+            unit = "\n".join(lines[unit_start:i])
+            if "←" in unit or l.strip().startswith(("←", '"')):
+                quoted.append((rel, i, l.strip()[:64]))
+            else:
+                bad.append((rel, i, l.strip()[:64]))
+    return bad, quoted
 
 
 def c6_voids():
@@ -171,10 +192,13 @@ if __name__ == "__main__":
     for row in b3:
         print(f"    {row}")
 
-    b4 = c4_counts_in_prose()
-    print(f"\nC4 counts-in-prose violations = {len(b4)}")
+    b4, q4 = c4_counts_in_prose()
+    print(f"\nC4 counts-in-prose violations = {len(b4)}"
+          f" · counts inside quoted evidence = {len(q4)} [see decisions.md D1, OPEN]")
     for f, ln, l in b4:
-        print(f"    {f}:{ln}  {l}")
+        print(f"    VIOLATION {f}:{ln}  {l}")
+    for f, ln, l in q4:
+        print(f"    quoted    {f}:{ln}  {l}")
 
     v = c6_voids()
     print(f"\nC6 voids-reported total = {sum(v.values())} across {len(v)} gists")
